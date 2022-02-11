@@ -9,8 +9,6 @@ namespace Eu4HackGUI.CodeGen
         private static readonly string dataFolder = "/Data/";
         private static readonly string ideas = "00_country_ideas.txt";
         private static readonly string ideaPath = (currentFolder + dataFolder + ideas).ToString();
-        static bool First = true;
-
         public static void DoTheThing()
         {
             using (StreamWriter streamWriter = new StreamWriter(currentFolder + dataFolder + "IdeaList.txt"))

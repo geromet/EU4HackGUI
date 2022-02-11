@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 using Eu4HackGUI.CodeGen;
+
 namespace Eu4HackGUI
 {
     public partial class GUI : Form
     {
-        string CountryTag;
-        List<string> SelectedIdeas = new List<string>();
+        
         public GUI()
         {
             InitializeComponent();
@@ -25,27 +25,21 @@ namespace Eu4HackGUI
 
         private void SearchCountry_TextChanged(object sender, EventArgs e)
         {
-            CountryTag = Controllers.Controller.SetCountryTag(SearchCountry.Text);
-            SelectedCountry.Text = CountryTag;
+            Controller.SetCountryTag(SearchCountry.Text);
+            SelectedCountry.Text = Controller.GetCountryTag();
         }
 
         private void CreateIdeaList_Click(object sender, EventArgs e)
         {
             MakeIdeaList.DoTheThing();
         }
-
-        private void ValueInputPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void IdeaListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             foreach(var idea in IdeaListBox.CheckedItems)
             {
-                if (!SelectedIdeas.Contains(idea.ToString()))
+                if (!Controller.GetSelectedIdeas().Contains(idea.ToString()))
                 {
-                    SelectedIdeas.Add(idea.ToString());
+                    Controller.AddIdea(idea.ToString());
                     IdeaControl ideaControl = new IdeaControl();
                     ideaControl.SetLabel(idea.ToString());
                     ideaControl.Name = idea.ToString();
@@ -53,7 +47,7 @@ namespace Eu4HackGUI
                 }
 
             }
-            foreach(string selectedIdea in SelectedIdeas)
+            foreach(string selectedIdea in Controller.GetSelectedIdeas())
             {
                 if (!IdeaListBox.CheckedItems.Contains(selectedIdea))
                 {
@@ -62,7 +56,7 @@ namespace Eu4HackGUI
                         if (ideaControl.Name == selectedIdea)
                         {
                             flowPanel.Controls.Remove(ideaControl);
-                            SelectedIdeas.Remove(selectedIdea);
+                            Controller.RemoveIdea(selectedIdea);
                             break;
                         }
                     }

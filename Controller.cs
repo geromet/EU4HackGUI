@@ -1,16 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
-namespace Eu4HackGUI.Functions
+namespace Eu4HackGUI
 {
-    public static class GetCountryTag
-    {
-        public static string Get(string CountryName)
-        {
-            string CountryTag="";
+	public class Controller
+	{
+		private static string countryTag;
+		private static List<string> selectedIdeas = new List<string>();
+
+		public static void SetCountryTag(string CountryName)
+		{
+			string CountryTag = "";
 			switch (CountryName)
 			{
 				case "Sweden":
@@ -4274,11 +4273,24 @@ namespace Eu4HackGUI.Functions
 						break;
 					}
 				default:
-                    {
+					{
 						break;
-                    }
+					}
 			}
-			return CountryTag;
+			countryTag = CountryTag;
 		}
-    }
+		public static string GetCountryTag() => countryTag;
+		public static void AddIdea(string idea)
+        {
+			selectedIdeas.Add(idea);
+        }
+		public static List<string> GetSelectedIdeas()
+        {
+			return selectedIdeas;	
+        }
+		public static void RemoveIdea(string idea)
+        {
+			selectedIdeas.Remove(idea);
+        }
+	}
 }

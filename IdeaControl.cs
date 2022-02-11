@@ -23,11 +23,6 @@ namespace Eu4HackGUI
             Idea.Text = label;
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Add_Click(object sender, EventArgs e)
         {
             CheckNumeric();

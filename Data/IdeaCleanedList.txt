@@ -151,6 +151,7 @@ advisor_pool
 liberty_desire_from_subject_development
 vassal_income
 harsh_treatment_cost
+
 may_explore
 shock_damage_received
 same_culture_advisor_cost
@@ -198,6 +199,7 @@ enforce_religion_cost
 free_adm_policy
 yearly_tribal_allegiance
 embracement_cost
+religion
 leader_naval_shock
 mercenary_cost
 backrow_artillery_damage

@@ -1,4 +1,7 @@
 ﻿
+using System;
+using System.Windows.Forms;
+
 namespace Eu4HackGUI
 {
     partial class GUI
@@ -1233,6 +1236,8 @@ namespace Eu4HackGUI
             this.ResumeLayout(false);
 
         }
+
+
 
         #endregion
 

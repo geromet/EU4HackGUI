@@ -45,7 +45,6 @@ namespace Eu4HackGUI
             this.Idea.TabIndex = 0;
             this.Idea.Text = "Idea";
             this.Idea.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Idea.Click += new System.EventHandler(this.label1_Click);
             // 
             // Value
             // 
