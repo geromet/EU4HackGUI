@@ -42,19 +42,24 @@ namespace Eu4HackGUI
             this.flowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.IdeaListBox = new System.Windows.Forms.CheckedListBox();
             this.SearchCountry = new System.Windows.Forms.TextBox();
+            this.Hack = new System.Windows.Forms.TabPage();
+            this.HackCountryIdeas = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.DevTools.SuspendLayout();
             this.Selection.SuspendLayout();
+            this.Hack.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.DevTools);
             this.tabControl1.Controls.Add(this.Selection);
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
+            this.tabControl1.Controls.Add(this.Hack);
+            this.tabControl1.Location = new System.Drawing.Point(10, 9);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(776, 426);
+            this.tabControl1.Size = new System.Drawing.Size(679, 320);
             this.tabControl1.TabIndex = 0;
             // 
             // DevTools
@@ -63,19 +68,21 @@ namespace Eu4HackGUI
             this.DevTools.Controls.Add(this.SelectedCountry);
             this.DevTools.Controls.Add(this.CreateCountryList);
             this.DevTools.Controls.Add(this.CreateCountrySelectionSwitch);
-            this.DevTools.Location = new System.Drawing.Point(4, 29);
+            this.DevTools.Location = new System.Drawing.Point(4, 24);
+            this.DevTools.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DevTools.Name = "DevTools";
-            this.DevTools.Padding = new System.Windows.Forms.Padding(3);
-            this.DevTools.Size = new System.Drawing.Size(768, 393);
+            this.DevTools.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DevTools.Size = new System.Drawing.Size(671, 292);
             this.DevTools.TabIndex = 0;
             this.DevTools.Text = "DevTools";
             this.DevTools.UseVisualStyleBackColor = true;
             // 
             // CreateIdeaList
             // 
-            this.CreateIdeaList.Location = new System.Drawing.Point(7, 79);
+            this.CreateIdeaList.Location = new System.Drawing.Point(6, 59);
+            this.CreateIdeaList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CreateIdeaList.Name = "CreateIdeaList";
-            this.CreateIdeaList.Size = new System.Drawing.Size(242, 29);
+            this.CreateIdeaList.Size = new System.Drawing.Size(212, 22);
             this.CreateIdeaList.TabIndex = 3;
             this.CreateIdeaList.Text = "CreateIdeaList";
             this.CreateIdeaList.UseVisualStyleBackColor = true;
@@ -84,17 +91,18 @@ namespace Eu4HackGUI
             // SelectedCountry
             // 
             this.SelectedCountry.AutoSize = true;
-            this.SelectedCountry.Location = new System.Drawing.Point(641, 7);
+            this.SelectedCountry.Location = new System.Drawing.Point(561, 5);
             this.SelectedCountry.Name = "SelectedCountry";
-            this.SelectedCountry.Size = new System.Drawing.Size(121, 20);
+            this.SelectedCountry.Size = new System.Drawing.Size(97, 15);
             this.SelectedCountry.TabIndex = 2;
             this.SelectedCountry.Text = "Selected Country";
             // 
             // CreateCountryList
             // 
-            this.CreateCountryList.Location = new System.Drawing.Point(7, 43);
+            this.CreateCountryList.Location = new System.Drawing.Point(6, 32);
+            this.CreateCountryList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CreateCountryList.Name = "CreateCountryList";
-            this.CreateCountryList.Size = new System.Drawing.Size(242, 29);
+            this.CreateCountryList.Size = new System.Drawing.Size(212, 22);
             this.CreateCountryList.TabIndex = 1;
             this.CreateCountryList.Text = "Create country list";
             this.CreateCountryList.UseVisualStyleBackColor = true;
@@ -102,9 +110,10 @@ namespace Eu4HackGUI
             // 
             // CreateCountrySelectionSwitch
             // 
-            this.CreateCountrySelectionSwitch.Location = new System.Drawing.Point(7, 7);
+            this.CreateCountrySelectionSwitch.Location = new System.Drawing.Point(6, 5);
+            this.CreateCountrySelectionSwitch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CreateCountrySelectionSwitch.Name = "CreateCountrySelectionSwitch";
-            this.CreateCountrySelectionSwitch.Size = new System.Drawing.Size(242, 29);
+            this.CreateCountrySelectionSwitch.Size = new System.Drawing.Size(212, 22);
             this.CreateCountrySelectionSwitch.TabIndex = 0;
             this.CreateCountrySelectionSwitch.Text = "Create Country Selection Switch";
             this.CreateCountrySelectionSwitch.UseVisualStyleBackColor = true;
@@ -115,10 +124,11 @@ namespace Eu4HackGUI
             this.Selection.Controls.Add(this.flowPanel);
             this.Selection.Controls.Add(this.IdeaListBox);
             this.Selection.Controls.Add(this.SearchCountry);
-            this.Selection.Location = new System.Drawing.Point(4, 29);
+            this.Selection.Location = new System.Drawing.Point(4, 24);
+            this.Selection.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Selection.Name = "Selection";
-            this.Selection.Padding = new System.Windows.Forms.Padding(3);
-            this.Selection.Size = new System.Drawing.Size(768, 393);
+            this.Selection.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Selection.Size = new System.Drawing.Size(671, 292);
             this.Selection.TabIndex = 1;
             this.Selection.Text = "Selection";
             this.Selection.UseVisualStyleBackColor = true;
@@ -126,9 +136,10 @@ namespace Eu4HackGUI
             // flowPanel
             // 
             this.flowPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowPanel.Location = new System.Drawing.Point(273, 42);
+            this.flowPanel.Location = new System.Drawing.Point(239, 32);
+            this.flowPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowPanel.Name = "flowPanel";
-            this.flowPanel.Size = new System.Drawing.Size(489, 333);
+            this.flowPanel.Size = new System.Drawing.Size(428, 250);
             this.flowPanel.TabIndex = 3;
             // 
             // IdeaListBox
@@ -350,9 +361,10 @@ namespace Eu4HackGUI
             "yearly_corruption",
             "yearly_tribal_allegiance",
             "years_of_nationalism"});
-            this.IdeaListBox.Location = new System.Drawing.Point(6, 41);
+            this.IdeaListBox.Location = new System.Drawing.Point(5, 31);
+            this.IdeaListBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.IdeaListBox.Name = "IdeaListBox";
-            this.IdeaListBox.Size = new System.Drawing.Size(260, 334);
+            this.IdeaListBox.Size = new System.Drawing.Size(228, 238);
             this.IdeaListBox.Sorted = true;
             this.IdeaListBox.TabIndex = 2;
             this.IdeaListBox.SelectedIndexChanged += new System.EventHandler(this.IdeaListBox_SelectedIndexChanged);
@@ -1214,18 +1226,41 @@ namespace Eu4HackGUI
             "Trapalanda"});
             this.SearchCountry.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.SearchCountry.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.SearchCountry.Location = new System.Drawing.Point(7, 8);
+            this.SearchCountry.Location = new System.Drawing.Point(6, 6);
+            this.SearchCountry.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SearchCountry.Name = "SearchCountry";
-            this.SearchCountry.Size = new System.Drawing.Size(755, 27);
+            this.SearchCountry.Size = new System.Drawing.Size(661, 23);
             this.SearchCountry.TabIndex = 1;
             this.SearchCountry.TextChanged += new System.EventHandler(this.SearchCountry_TextChanged);
             // 
+            // Hack
+            // 
+            this.Hack.Controls.Add(this.HackCountryIdeas);
+            this.Hack.Location = new System.Drawing.Point(4, 24);
+            this.Hack.Name = "Hack";
+            this.Hack.Padding = new System.Windows.Forms.Padding(3);
+            this.Hack.Size = new System.Drawing.Size(671, 292);
+            this.Hack.TabIndex = 2;
+            this.Hack.Text = "Hack";
+            this.Hack.UseVisualStyleBackColor = true;
+            // 
+            // HackCountryIdeas
+            // 
+            this.HackCountryIdeas.Location = new System.Drawing.Point(3, 3);
+            this.HackCountryIdeas.Name = "HackCountryIdeas";
+            this.HackCountryIdeas.Size = new System.Drawing.Size(190, 23);
+            this.HackCountryIdeas.TabIndex = 0;
+            this.HackCountryIdeas.Text = "HackCountryIdeas";
+            this.HackCountryIdeas.UseVisualStyleBackColor = true;
+            this.HackCountryIdeas.Click += new System.EventHandler(this.HackCountryIdeas_Click);
+            // 
             // GUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(700, 338);
             this.Controls.Add(this.tabControl1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "GUI";
             this.Text = "GUI";
             this.tabControl1.ResumeLayout(false);
@@ -1233,6 +1268,7 @@ namespace Eu4HackGUI
             this.DevTools.PerformLayout();
             this.Selection.ResumeLayout(false);
             this.Selection.PerformLayout();
+            this.Hack.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1251,5 +1287,7 @@ namespace Eu4HackGUI
         private System.Windows.Forms.Button CreateIdeaList;
         private System.Windows.Forms.CheckedListBox IdeaListBox;
         private System.Windows.Forms.FlowLayoutPanel flowPanel;
+        private TabPage Hack;
+        private Button HackCountryIdeas;
     }
 }

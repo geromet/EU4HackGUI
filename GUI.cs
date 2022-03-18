@@ -64,5 +64,10 @@ namespace Eu4HackGUI
                 }
             }            
         }
+
+        private void HackCountryIdeas_Click(object sender, EventArgs e)
+        {
+            Eu4HackGUI.Hack.Hack.Run(1, 1);
+        }
     }
 }

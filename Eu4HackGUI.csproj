@@ -2,8 +2,24 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net6.0-windows</TargetFramework>
+    <TargetFramework>net6.0-windows10.0.22000.0</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
+    <SupportedOSPlatformVersion>7.0</SupportedOSPlatformVersion>
+    <BaseOutputPath>bin\</BaseOutputPath>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Files\backup\common\ideas\00_country_ideas.txt" />
+    <None Remove="Files\common\ideas\00_country_ideas.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Files\backup\common\ideas\00_country_ideas.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\common\ideas\00_country_ideas.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
 
 </Project>
