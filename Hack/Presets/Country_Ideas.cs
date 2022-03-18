@@ -9,7 +9,7 @@ namespace Eu4HackGUI.Hack.Presets
     internal class Country_Ideas
     {
         private static string fileName = "00_country_ideas.txt";
-        private static string backupDir = "Files/common/ideas";
+        private static string backupDir = "Files/backup/common/ideas";
         private static string sourceDir = "Files/common/ideas";
         private static string destinationDir = "C:/Program Files (x86)/Steam/steamapps/common/Europa Universalis IV/common/ideas";
         private static string searchString = "ChurchAspectDatabase Initialized";

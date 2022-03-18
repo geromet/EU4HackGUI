@@ -37,6 +37,7 @@ namespace Eu4HackGUI.Hack
         {
             Initialize(copyDelay, readDelay);
             Clean();
+            BackupHack();
             WaitForGame();
             FileStream stream = File.Open((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/Paradox Interactive/Europa Universalis IV/logs/setup.log").ToString(), FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
             using (stream)
@@ -46,11 +47,14 @@ namespace Eu4HackGUI.Hack
                 {
                     string line;
                     Thread.Sleep(_readDelay);
-                    while (true)
+                    while (_types.Count > 0)
                     {
                         line = reader.ReadLine();
-                        if (line == null) continue;
-                        foreach(Type type in _types)
+                        if (line == null)
+                        {
+                            continue;
+                        }
+                        foreach (Type type in _types)
                         {
                             if (type.TryCopy(line))
                             {
@@ -63,6 +67,13 @@ namespace Eu4HackGUI.Hack
                 
             }
             
+        }
+        public static void BackupHack()
+        {
+            foreach (Type type in _types)
+            {
+                type.Clean();
+            }
         }
         private static void WaitForGame()
         {
