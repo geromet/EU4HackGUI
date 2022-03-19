@@ -10,16 +10,30 @@
 
   <ItemGroup>
     <None Remove="Files\backup\common\ideas\00_country_ideas.txt" />
+    <None Remove="Files\backup\history\countries\HOL - Holland.txt" />
     <None Remove="Files\common\ideas\00_country_ideas.txt" />
+    <None Remove="Files\history\countries\HOL - Holland.txt" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="Files\backup\common\ideas\00_country_ideas.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Files\backup\history\countries\HOL - Holland.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Files\common\ideas\00_country_ideas.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Files\history\countries\HOL - Holland.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Hack\Presets\Country.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
   </ItemGroup>
 
 </Project>

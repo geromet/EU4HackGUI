@@ -1,0 +1,62 @@
+[eu4application.cpp:1432]: TradingPolicyDataBase Initialized
+[eu4application.cpp:1448]: CGovernmentRankDatabase Initialized
+[eu4application.cpp:1465]: FactionDatabase Initialized
+[eu4application.cpp:1482]: TechnologyDatabase Phase #1 Initialized
+[eu4application.cpp:1498]: CenterOfTradeDatabase Initialized
+[eu4application.cpp:1518]: Static Modifiers Initialized
+[eu4application.cpp:1533]: Event Modifiers Initialized
+[eu4application.cpp:1550]: Opinions Initialized
+[eu4application.cpp:1567]: Timed Modifiers Initialized
+[eu4application.cpp:1586]: CountryTags Initialized
+[eu4application.cpp:1602]: PowerProjection Initialized
+[eu4application.cpp:1617]: Scripted triggers Initialized
+[eu4application.cpp:1632]: Scripted effects Initialized
+[eu4application.cpp:1648]: CultureDatabase Initialized
+[eu4application.cpp:1663]: ReligionDatabase Initialized
+[eu4application.cpp:1679]: ReligiousConversionDataBase Initialized
+[eu4application.cpp:1710]: AdvisorTypeDatabase Initialized
+[eu4application.cpp:1727]: GovernmentReformDatabase Initialized
+[eu4application.cpp:1743]: GovernmentNameDatabase Initialized
+[eu4application.cpp:1758]: GovernmentDatabase Initialized
+[eu4application.cpp:1779]: EstateDatabase Initialized
+[eu4application.cpp:1794]: BuildingDatabase Initialized
+[eu4application.cpp:1809]: DeityDatabase Initialized
+[eu4application.cpp:1824]: FetishistCultDatabase Initialized
+[eu4application.cpp:1844]: BuildingDatabase Initialized
+[eu4application.cpp:1862]: TechnologyDatabase Phase #2 Initialized
+[eu4application.cpp:1877]: CountryDatabase Initialized
+[eu4application.cpp:1893]: FervorDatabase Initialized
+[eu4application.cpp:1908]: ChurchAspectDatabase Initialized
+[eu4application.cpp:1923]: IdeaDatabase Initialized
+[eu4application.cpp:1938]: ReligiousReformDatabase Initialized
+[eu4application.cpp:1954]: CustomIdeaDataBase Initialized
+[eu4application.cpp:1971]: NavalDoctrineDatabase Initialized
+[eu4application.cpp:1989]: Custom Country Colors Initialized
+[eu4application.cpp:2019]: CountryDatabaseFiles Read
+[eu4application.cpp:2040]: Policies Initialized
+[eu4application.cpp:2067]: Map Initialized
+[eu4application.cpp:2090]: TradeNodeDatabase Initialized
+[eu4application.cpp:2105]: Dynamic Province Names Initialized
+[eu4application.cpp:2122]: Colonial Regions Initialized
+[eu4application.cpp:2139]: Client States Initialized
+[eu4application.cpp:2157]: Trade Companies Initialized
+[eu4application.cpp:2173]: Trade Companies Investments Initialized
+[eu4application.cpp:2207]: TProvince riggered Modifiers Initialized
+[eu4application.cpp:2223]: Revolt Triggers Initialized
+[eu4application.cpp:2238]: AI Personality Types Initialized
+[eu4application.cpp:2253]: AI Attitude Types Initialized
+[eu4application.cpp:2275]: Imperial Reforms Initialized
+[eu4application.cpp:2291]: Imperial Incidents Initialized
+[eu4application.cpp:2307]: Decrees Initialized
+[eu4application.cpp:2322]: Isolation levels Initialized
+[eu4application.cpp:2337]: Incidents Initialized
+[eu4application.cpp:2352]: Insults Initialized
+[eu4application.cpp:2367]: Rebel Types Initialized
+[eu4application.cpp:2382]: War Goal Types Initialized
+[eu4application.cpp:2399]: Casus Belli Types Initialized
+[eu4application.cpp:2417]: TradeGoods Prices Initialized
+[eu4application.cpp:2437]: Diplomatic Actions Initialized
+[eu4application.cpp:2452]: Scripted Functions Initialized
+[eu4application.cpp:2495]: Graphical unit types database Initialized
+[eu4application.cpp:2596]: Dynasty Colors Initialized
+[eu4application.cpp:2624]: History Initialized

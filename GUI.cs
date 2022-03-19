@@ -70,10 +70,6 @@ namespace Eu4HackGUI
             Eu4HackGUI.Hack.Hack.Run(1, 1);
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Eu4HackGUI.Hack.Presets.Country_Ideas.Add();
-            Eu4HackGUI.Hack.Hack.BackupHack();
-        }
+
     }
 }

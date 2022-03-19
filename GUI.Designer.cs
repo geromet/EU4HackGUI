@@ -44,7 +44,6 @@ namespace Eu4HackGUI
             this.SearchCountry = new System.Windows.Forms.TextBox();
             this.Hack = new System.Windows.Forms.TabPage();
             this.HackCountryIdeas = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.DevTools.SuspendLayout();
             this.Selection.SuspendLayout();
@@ -70,7 +69,7 @@ namespace Eu4HackGUI
             this.DevTools.Controls.Add(this.CreateCountrySelectionSwitch);
             this.DevTools.Location = new System.Drawing.Point(4, 29);
             this.DevTools.Name = "DevTools";
-            this.DevTools.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.DevTools.Padding = new System.Windows.Forms.Padding(3);
             this.DevTools.Size = new System.Drawing.Size(768, 394);
             this.DevTools.TabIndex = 0;
             this.DevTools.Text = "DevTools";
@@ -122,7 +121,7 @@ namespace Eu4HackGUI
             this.Selection.Controls.Add(this.SearchCountry);
             this.Selection.Location = new System.Drawing.Point(4, 29);
             this.Selection.Name = "Selection";
-            this.Selection.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Selection.Padding = new System.Windows.Forms.Padding(3);
             this.Selection.Size = new System.Drawing.Size(768, 394);
             this.Selection.TabIndex = 1;
             this.Selection.Text = "Selection";
@@ -1227,7 +1226,6 @@ namespace Eu4HackGUI
             // 
             // Hack
             // 
-            this.Hack.Controls.Add(this.button1);
             this.Hack.Controls.Add(this.HackCountryIdeas);
             this.Hack.Location = new System.Drawing.Point(4, 29);
             this.Hack.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -1248,16 +1246,6 @@ namespace Eu4HackGUI
             this.HackCountryIdeas.Text = "HackCountryIdeas";
             this.HackCountryIdeas.UseVisualStyleBackColor = true;
             this.HackCountryIdeas.Click += new System.EventHandler(this.HackCountryIdeas_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(0, 42);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // GUI
             // 
@@ -1293,6 +1281,5 @@ namespace Eu4HackGUI
         private System.Windows.Forms.FlowLayoutPanel flowPanel;
         private TabPage Hack;
         private Button HackCountryIdeas;
-        private Button button1;
     }
 }
