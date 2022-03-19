@@ -40,7 +40,7 @@
 
   <ItemGroup>
     <Compile Update="Hack\Presets\Country.cs">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Compile>
   </ItemGroup>
 
