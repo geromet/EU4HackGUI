@@ -30,6 +30,7 @@ namespace Eu4HackGUI.Hack
         {
             Country_Ideas.Add();
             Country.Add();
+            Province.Add();
             _readDelay = 200;//200
             _gameLoadDelay = 5000;//5000
         }
@@ -55,13 +56,17 @@ namespace Eu4HackGUI.Hack
                         {
                             continue;
                         }
+                        List<Type> types = new List<Type>();
                         foreach (Type type in _types)
                         {
                             if (type.TryCopy(line))
                             {
-                                _types.Remove(type);
-                                break;
+                                types.Add(type);
                             }
+                        }
+                        foreach(Type type in types)
+                        {
+                            _types.Remove(type);
                         }
                     }
                 }
