@@ -38,23 +38,25 @@ namespace Eu4HackGUI
             this.SelectedCountry = new System.Windows.Forms.Label();
             this.CreateCountryList = new System.Windows.Forms.Button();
             this.CreateCountrySelectionSwitch = new System.Windows.Forms.Button();
-            this.Selection = new System.Windows.Forms.TabPage();
+            this.IdeaSelection = new System.Windows.Forms.TabPage();
             this.flowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.IdeaListBox = new System.Windows.Forms.CheckedListBox();
             this.SearchCountry = new System.Windows.Forms.TextBox();
             this.Hack = new System.Windows.Forms.TabPage();
             this.HackCountryIdeas = new System.Windows.Forms.Button();
+            this.ProvinceSelection = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.DevTools.SuspendLayout();
-            this.Selection.SuspendLayout();
+            this.IdeaSelection.SuspendLayout();
             this.Hack.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.DevTools);
-            this.tabControl1.Controls.Add(this.Selection);
+            this.tabControl1.Controls.Add(this.IdeaSelection);
             this.tabControl1.Controls.Add(this.Hack);
+            this.tabControl1.Controls.Add(this.ProvinceSelection);
             this.tabControl1.Location = new System.Drawing.Point(11, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -114,18 +116,18 @@ namespace Eu4HackGUI
             this.CreateCountrySelectionSwitch.UseVisualStyleBackColor = true;
             this.CreateCountrySelectionSwitch.Click += new System.EventHandler(this.CreateCountrySelectionSwitch_Click);
             // 
-            // Selection
+            // IdeaSelection
             // 
-            this.Selection.Controls.Add(this.flowPanel);
-            this.Selection.Controls.Add(this.IdeaListBox);
-            this.Selection.Controls.Add(this.SearchCountry);
-            this.Selection.Location = new System.Drawing.Point(4, 29);
-            this.Selection.Name = "Selection";
-            this.Selection.Padding = new System.Windows.Forms.Padding(3);
-            this.Selection.Size = new System.Drawing.Size(768, 394);
-            this.Selection.TabIndex = 1;
-            this.Selection.Text = "Selection";
-            this.Selection.UseVisualStyleBackColor = true;
+            this.IdeaSelection.Controls.Add(this.flowPanel);
+            this.IdeaSelection.Controls.Add(this.IdeaListBox);
+            this.IdeaSelection.Controls.Add(this.SearchCountry);
+            this.IdeaSelection.Location = new System.Drawing.Point(4, 29);
+            this.IdeaSelection.Name = "IdeaSelection";
+            this.IdeaSelection.Padding = new System.Windows.Forms.Padding(3);
+            this.IdeaSelection.Size = new System.Drawing.Size(768, 394);
+            this.IdeaSelection.TabIndex = 1;
+            this.IdeaSelection.Text = "IdeaSelection";
+            this.IdeaSelection.UseVisualStyleBackColor = true;
             // 
             // flowPanel
             // 
@@ -1247,6 +1249,15 @@ namespace Eu4HackGUI
             this.HackCountryIdeas.UseVisualStyleBackColor = true;
             this.HackCountryIdeas.Click += new System.EventHandler(this.HackCountryIdeas_Click);
             // 
+            // ProvinceSelection
+            // 
+            this.ProvinceSelection.Location = new System.Drawing.Point(4, 29);
+            this.ProvinceSelection.Name = "ProvinceSelection";
+            this.ProvinceSelection.Size = new System.Drawing.Size(768, 394);
+            this.ProvinceSelection.TabIndex = 3;
+            this.ProvinceSelection.Text = "ProvinceSelection";
+            this.ProvinceSelection.UseVisualStyleBackColor = true;
+            // 
             // GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -1258,8 +1269,8 @@ namespace Eu4HackGUI
             this.tabControl1.ResumeLayout(false);
             this.DevTools.ResumeLayout(false);
             this.DevTools.PerformLayout();
-            this.Selection.ResumeLayout(false);
-            this.Selection.PerformLayout();
+            this.IdeaSelection.ResumeLayout(false);
+            this.IdeaSelection.PerformLayout();
             this.Hack.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -1273,7 +1284,7 @@ namespace Eu4HackGUI
         private System.Windows.Forms.TabPage DevTools;
         private System.Windows.Forms.Button CreateCountryList;
         private System.Windows.Forms.Button CreateCountrySelectionSwitch;
-        private System.Windows.Forms.TabPage Selection;
+        private System.Windows.Forms.TabPage IdeaSelection;
         private System.Windows.Forms.Label SelectedCountry;
         private System.Windows.Forms.TextBox SearchCountry;
         private System.Windows.Forms.Button CreateIdeaList;
@@ -1281,5 +1292,6 @@ namespace Eu4HackGUI
         private System.Windows.Forms.FlowLayoutPanel flowPanel;
         private TabPage Hack;
         private Button HackCountryIdeas;
+        private TabPage ProvinceSelection;
     }
 }
