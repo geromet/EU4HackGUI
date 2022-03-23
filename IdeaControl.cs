@@ -24,9 +24,10 @@ namespace Eu4HackGUI
         }
 
         private void Add_Click(object sender, EventArgs e)
-        {
-            CheckNumeric();
-            Value.Text = (double.Parse(Value.Text) + 0.1).ToString();
+        { 
+            double value = Double.Parse(Value.Text);
+            value += 0.1f;
+            Value.Text = Math.Round(value, 2).ToString();
         }
 
         private void Value_TextChanged(object sender, EventArgs e)
@@ -36,8 +37,9 @@ namespace Eu4HackGUI
 
         private void Substract_Click(object sender, EventArgs e)
         {
-            CheckNumeric();
-            Value.Text = (double.Parse(Value.Text) - 0.1).ToString();
+            double value = Double.Parse(Value.Text);
+            value -= 0.1f;
+            Value.Text = Math.Round(value, 2).ToString();
         }
 
         void CheckNumeric()
@@ -50,7 +52,8 @@ namespace Eu4HackGUI
             {
                 Value.Text = "0";
             }
-            Value.Text = Regex.Replace(Value.Text, "[^-,0-9]", "");
+            
+            Value.Text = Math.Round(Double.Parse(Regex.Replace(Value.Text, "[^-,0-9]", "")), 2).ToString();
         }
     }
 }

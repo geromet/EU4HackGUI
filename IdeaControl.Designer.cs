@@ -39,28 +39,29 @@ namespace Eu4HackGUI
             // 
             this.Idea.AutoEllipsis = true;
             this.Idea.AutoSize = true;
-            this.Idea.Location = new System.Drawing.Point(3, 0);
+            this.Idea.Location = new System.Drawing.Point(127, 23);
             this.Idea.Name = "Idea";
-            this.Idea.Size = new System.Drawing.Size(38, 20);
+            this.Idea.Size = new System.Drawing.Size(29, 15);
             this.Idea.TabIndex = 0;
             this.Idea.Text = "Idea";
             this.Idea.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Value
             // 
-            this.Value.Location = new System.Drawing.Point(90, 26);
+            this.Value.Location = new System.Drawing.Point(79, 20);
+            this.Value.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Value.Name = "Value";
-            this.Value.Size = new System.Drawing.Size(37, 27);
+            this.Value.Size = new System.Drawing.Size(33, 23);
             this.Value.TabIndex = 1;
             this.Value.Text = "0";
-            this.Value.TextChanged += new System.EventHandler(this.Value_TextChanged);
             // 
             // Substract
             // 
             this.Substract.AutoSize = true;
-            this.Substract.Location = new System.Drawing.Point(3, 23);
+            this.Substract.Location = new System.Drawing.Point(3, 17);
+            this.Substract.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Substract.Name = "Substract";
-            this.Substract.Size = new System.Drawing.Size(38, 30);
+            this.Substract.Size = new System.Drawing.Size(33, 25);
             this.Substract.TabIndex = 2;
             this.Substract.Text = "-";
             this.Substract.UseVisualStyleBackColor = true;
@@ -69,9 +70,10 @@ namespace Eu4HackGUI
             // Add
             // 
             this.Add.AutoSize = true;
-            this.Add.Location = new System.Drawing.Point(47, 23);
+            this.Add.Location = new System.Drawing.Point(41, 17);
+            this.Add.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(37, 30);
+            this.Add.Size = new System.Drawing.Size(32, 25);
             this.Add.TabIndex = 3;
             this.Add.Text = "+";
             this.Add.UseVisualStyleBackColor = true;
@@ -79,15 +81,16 @@ namespace Eu4HackGUI
             // 
             // IdeaControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.Controls.Add(this.Add);
             this.Controls.Add(this.Substract);
             this.Controls.Add(this.Value);
             this.Controls.Add(this.Idea);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "IdeaControl";
-            this.Size = new System.Drawing.Size(198, 82);
+            this.Size = new System.Drawing.Size(300, 62);
             this.ResumeLayout(false);
             this.PerformLayout();
 

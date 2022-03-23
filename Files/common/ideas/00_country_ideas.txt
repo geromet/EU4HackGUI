@@ -377,8 +377,13 @@ NED_ideas = {
 			trade_efficiency = 2
 			diplomatic_reputation = 4
 			diplomats = 2
-			development_cost = -1
+			development_cost = -0.5
 			merchants = 4
+			production_efficiency = 2
+			diplomatic_upkeep = 4
+			global_manpower_modifier = 0.4
+			trade_steering = 2
+			global_prov_trade_power_modifier = 2
 		}
 		naval_forcelimit_modifier = 0.50
 	}

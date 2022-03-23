@@ -28,7 +28,22 @@ namespace Eu4HackGUI.Hack
         }
         private static void Initialize(int readDelay, int gameLoadDelay)
         {
-            Country_Ideas.Add();
+            foreach(string type in Controller.GetSelectedTypes())
+            {
+                switch(type)
+                {
+                    case "Country_Ideas" :
+                        Country_Ideas.Add();
+                        break;
+                    case "Provinces":
+                        Province.Add();
+                        break;
+                    case "Countries":
+                        Country.Add();
+                        break;
+                }
+            }
+            
             Country.Add();
             Province.Add();
             _readDelay = 200;//200
@@ -39,7 +54,6 @@ namespace Eu4HackGUI.Hack
         {
             Initialize(copyDelay, readDelay);
             Clean();
-            Backup();
             WaitForGame();
             FileStream stream = File.Open((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/Paradox Interactive/Europa Universalis IV/logs/setup.log").ToString(), FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
             using (stream)
@@ -74,13 +88,7 @@ namespace Eu4HackGUI.Hack
             }
             
         }
-        public static void Backup()
-        {
-            foreach (Type type in _types)
-            {
-                type.Clean();
-            }
-        }
+
         private static void WaitForGame()
         {
             while (true)
@@ -100,7 +108,11 @@ namespace Eu4HackGUI.Hack
             {
                 type.Clean();
             }
-            
+            foreach (Type type in _types)
+            {
+                type.Clean();
+            }
+
         }
 
     }

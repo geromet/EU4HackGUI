@@ -39,49 +39,62 @@ namespace Eu4HackGUI
             this.CreateCountryList = new System.Windows.Forms.Button();
             this.CreateCountrySelectionSwitch = new System.Windows.Forms.Button();
             this.IdeaSelection = new System.Windows.Forms.TabPage();
-            this.flowPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.IdeaListBox = new System.Windows.Forms.CheckedListBox();
             this.SearchCountry = new System.Windows.Forms.TextBox();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.IdeaListBox = new System.Windows.Forms.CheckedListBox();
+            this.flowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.Hack = new System.Windows.Forms.TabPage();
-            this.HackCountryIdeas = new System.Windows.Forms.Button();
+            this.SelectedTypesLabel = new System.Windows.Forms.Label();
+            this.TypeCheckListBox = new System.Windows.Forms.CheckedListBox();
+            this.Run = new System.Windows.Forms.Button();
             this.ProvinceSelection = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.DevTools.SuspendLayout();
             this.IdeaSelection.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
             this.Hack.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
+            this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.tabControl1.Controls.Add(this.DevTools);
             this.tabControl1.Controls.Add(this.IdeaSelection);
             this.tabControl1.Controls.Add(this.Hack);
             this.tabControl1.Controls.Add(this.ProvinceSelection);
-            this.tabControl1.Location = new System.Drawing.Point(11, 12);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tabControl1.HotTrack = true;
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.MinimumSize = new System.Drawing.Size(70, 30);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(776, 427);
+            this.tabControl1.Size = new System.Drawing.Size(800, 428);
+            this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.tabControl1.TabIndex = 0;
             // 
             // DevTools
             // 
+            this.DevTools.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.DevTools.Controls.Add(this.CreateIdeaList);
             this.DevTools.Controls.Add(this.SelectedCountry);
             this.DevTools.Controls.Add(this.CreateCountryList);
             this.DevTools.Controls.Add(this.CreateCountrySelectionSwitch);
-            this.DevTools.Location = new System.Drawing.Point(4, 29);
+            this.DevTools.Location = new System.Drawing.Point(4, 31);
             this.DevTools.Name = "DevTools";
             this.DevTools.Padding = new System.Windows.Forms.Padding(3);
-            this.DevTools.Size = new System.Drawing.Size(768, 394);
+            this.DevTools.Size = new System.Drawing.Size(792, 393);
             this.DevTools.TabIndex = 0;
             this.DevTools.Text = "DevTools";
-            this.DevTools.UseVisualStyleBackColor = true;
             // 
             // CreateIdeaList
             // 
-            this.CreateIdeaList.Location = new System.Drawing.Point(7, 79);
+            this.CreateIdeaList.Location = new System.Drawing.Point(7, 75);
             this.CreateIdeaList.Name = "CreateIdeaList";
-            this.CreateIdeaList.Size = new System.Drawing.Size(242, 29);
+            this.CreateIdeaList.Size = new System.Drawing.Size(250, 28);
             this.CreateIdeaList.TabIndex = 3;
             this.CreateIdeaList.Text = "CreateIdeaList";
             this.CreateIdeaList.UseVisualStyleBackColor = true;
@@ -90,7 +103,7 @@ namespace Eu4HackGUI
             // SelectedCountry
             // 
             this.SelectedCountry.AutoSize = true;
-            this.SelectedCountry.Location = new System.Drawing.Point(641, 7);
+            this.SelectedCountry.Location = new System.Drawing.Point(641, 6);
             this.SelectedCountry.Name = "SelectedCountry";
             this.SelectedCountry.Size = new System.Drawing.Size(121, 20);
             this.SelectedCountry.TabIndex = 2;
@@ -98,9 +111,9 @@ namespace Eu4HackGUI
             // 
             // CreateCountryList
             // 
-            this.CreateCountryList.Location = new System.Drawing.Point(7, 43);
+            this.CreateCountryList.Location = new System.Drawing.Point(7, 41);
             this.CreateCountryList.Name = "CreateCountryList";
-            this.CreateCountryList.Size = new System.Drawing.Size(242, 29);
+            this.CreateCountryList.Size = new System.Drawing.Size(250, 28);
             this.CreateCountryList.TabIndex = 1;
             this.CreateCountryList.Text = "Create country list";
             this.CreateCountryList.UseVisualStyleBackColor = true;
@@ -108,9 +121,9 @@ namespace Eu4HackGUI
             // 
             // CreateCountrySelectionSwitch
             // 
-            this.CreateCountrySelectionSwitch.Location = new System.Drawing.Point(7, 7);
+            this.CreateCountrySelectionSwitch.Location = new System.Drawing.Point(7, 6);
             this.CreateCountrySelectionSwitch.Name = "CreateCountrySelectionSwitch";
-            this.CreateCountrySelectionSwitch.Size = new System.Drawing.Size(242, 29);
+            this.CreateCountrySelectionSwitch.Size = new System.Drawing.Size(250, 28);
             this.CreateCountrySelectionSwitch.TabIndex = 0;
             this.CreateCountrySelectionSwitch.Text = "Create Country Selection Switch";
             this.CreateCountrySelectionSwitch.UseVisualStyleBackColor = true;
@@ -118,250 +131,15 @@ namespace Eu4HackGUI
             // 
             // IdeaSelection
             // 
-            this.IdeaSelection.Controls.Add(this.flowPanel);
-            this.IdeaSelection.Controls.Add(this.IdeaListBox);
+            this.IdeaSelection.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.IdeaSelection.Controls.Add(this.SearchCountry);
-            this.IdeaSelection.Location = new System.Drawing.Point(4, 29);
+            this.IdeaSelection.Controls.Add(this.splitContainer1);
+            this.IdeaSelection.Location = new System.Drawing.Point(4, 31);
             this.IdeaSelection.Name = "IdeaSelection";
             this.IdeaSelection.Padding = new System.Windows.Forms.Padding(3);
-            this.IdeaSelection.Size = new System.Drawing.Size(768, 394);
+            this.IdeaSelection.Size = new System.Drawing.Size(792, 393);
             this.IdeaSelection.TabIndex = 1;
             this.IdeaSelection.Text = "IdeaSelection";
-            this.IdeaSelection.UseVisualStyleBackColor = true;
-            // 
-            // flowPanel
-            // 
-            this.flowPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowPanel.Location = new System.Drawing.Point(273, 43);
-            this.flowPanel.Name = "flowPanel";
-            this.flowPanel.Size = new System.Drawing.Size(489, 333);
-            this.flowPanel.TabIndex = 3;
-            // 
-            // IdeaListBox
-            // 
-            this.IdeaListBox.CheckOnClick = true;
-            this.IdeaListBox.FormattingEnabled = true;
-            this.IdeaListBox.Items.AddRange(new object[] {
-            "adm_tech_cost_modifier",
-            "administrative_efficiency",
-            "advisor_cost",
-            "advisor_pool",
-            "ae_impact",
-            "allowed_marine_fraction",
-            "amount_of_banners",
-            "army_tradition",
-            "army_tradition_decay",
-            "army_tradition_from_battle",
-            "artillery_cost",
-            "artillery_fire",
-            "artillery_power",
-            "auto_explore_adjacent_to_colony",
-            "autonomy_change_time",
-            "backrow_artillery_damage",
-            "blockade_efficiency",
-            "build_cost",
-            "build_time",
-            "burghers_influence_modifier",
-            "burghers_loyalty_modifier",
-            "capture_ship_chance",
-            "caravan_power",
-            "cav_to_inf_ratio",
-            "cavalry_cost",
-            "cavalry_fire",
-            "cavalry_flanking",
-            "cavalry_power",
-            "church_loyalty_modifier",
-            "church_power_modifier",
-            "colonists",
-            "core_creation",
-            "culture_conversion_cost",
-            "defensiveness",
-            "development_cost",
-            "devotion",
-            "dip_tech_cost_modifier",
-            "diplomatic_annexation_cost",
-            "diplomatic_reputation",
-            "diplomatic_upkeep",
-            "diplomats",
-            "discipline",
-            "disengagement_chance",
-            "drill_gain_modifier",
-            "embargo_efficiency",
-            "embracement_cost",
-            "enforce_religion_cost",
-            "envoy_travel_time",
-            "expand_administration_cost",
-            "fabricate_claims_cost",
-            "female_advisor_chance",
-            "fire_damage",
-            "fire_damage_received",
-            "flagship_cost",
-            "fort_maintenance_modifier",
-            "free_adm_policy",
-            "free_dip_policy",
-            "free_leader_pool",
-            "free_mil_policy",
-            "galley_cost",
-            "galley_power",
-            "garrison_size",
-            "general_cost",
-            "global_autonomy",
-            "global_colonial_growth",
-            "global_foreign_trade_power",
-            "global_garrison_growth",
-            "global_heretic_missionary_strength",
-            "global_institution_spread",
-            "global_manpower_modifier",
-            "global_missionary_strength",
-            "global_naval_engagement_modifier",
-            "global_own_trade_power",
-            "global_prov_trade_power_modifier",
-            "global_regiment_cost",
-            "global_regiment_recruit_speed",
-            "global_sailors_modifier",
-            "global_ship_cost",
-            "global_ship_recruit_speed",
-            "global_ship_trade_power",
-            "global_spy_defence",
-            "global_tariffs",
-            "global_tax_modifier",
-            "global_trade_goods_size_modifier",
-            "global_trade_power",
-            "global_unrest",
-            "governing_capacity_modifier",
-            "harsh_treatment_cost",
-            "has_country_flag",
-            "heavy_ship_cost",
-            "heavy_ship_power",
-            "heir_chance",
-            "horde_unity",
-            "hostile_attrition",
-            "idea_claim_colonies",
-            "idea_cost",
-            "imperial_authority",
-            "imperial_authority_value",
-            "imperial_mandate",
-            "improve_relation_modifier",
-            "infantry_cost",
-            "infantry_power",
-            "inflation_reduction",
-            "interest",
-            "justify_trade_conflict_cost",
-            "land_attrition",
-            "land_forcelimit_modifier",
-            "land_maintenance_modifier",
-            "land_morale",
-            "leader_land_fire",
-            "leader_land_manuever",
-            "leader_land_shock",
-            "leader_naval_fire",
-            "leader_naval_manuever",
-            "leader_naval_shock",
-            "leader_siege",
-            "legitimacy",
-            "liberty_desire",
-            "liberty_desire_from_subject_development",
-            "light_ship_cost",
-            "light_ship_power",
-            "loot_amount",
-            "manpower_recovery_speed",
-            "max_revolutionary_zeal",
-            "may_establish_frontier",
-            "may_explore",
-            "may_perform_slave_raid",
-            "may_perform_slave_raid_on_same_religion",
-            "may_recruit_female_generals",
-            "merc_maintenance_modifier",
-            "mercenary_cost",
-            "mercenary_discipline",
-            "mercenary_manpower",
-            "merchants",
-            "meritocracy",
-            "migration_cost",
-            "mil_tech_cost_modifier",
-            "min_autonomy_in_territories",
-            "missionaries",
-            "missionary_maintenance_cost",
-            "monarch_diplomatic_power",
-            "monarch_military_power",
-            "monthly_fervor_increase",
-            "monthly_piety",
-            "movement_speed",
-            "native_assimilation",
-            "native_uprising_chance",
-            "naval_attrition",
-            "naval_forcelimit_modifier",
-            "naval_maintenance_modifier",
-            "naval_morale",
-            "naval_tradition_from_battle",
-            "navy_tradition",
-            "navy_tradition_decay",
-            "no_religion_penalty",
-            "nobles_loyalty_modifier",
-            "num_accepted_cultures",
-            "own_coast_naval_combat_bonus",
-            "papal_influence",
-            "placed_merchant_power",
-            "possible_dip_policy",
-            "possible_policy",
-            "power_projection_from_insults",
-            "prestige",
-            "prestige_decay",
-            "prestige_from_land",
-            "primary_culture",
-            "privateer_efficiency",
-            "production_efficiency",
-            "province_warscore_cost",
-            "range",
-            "rebel_support_efficiency",
-            "recover_army_morale_speed",
-            "recover_navy_morale_speed",
-            "reduced_liberty_desire",
-            "reelection_cost",
-            "reform_progress_growth",
-            "reinforce_cost_modifier",
-            "reinforce_speed",
-            "religion_group",
-            "religious_unity",
-            "republican_tradition",
-            "rival_border_fort_maintenance",
-            "sailor_maintenance_modifer",
-            "sailors_recovery_speed",
-            "same_culture_advisor_cost",
-            "ship_durability",
-            "ship_power_propagation",
-            "shock_damage",
-            "shock_damage_received",
-            "siege_ability",
-            "siege_blockade_progress",
-            "spy_offence",
-            "stability_cost_modifier",
-            "state_maintenance_modifier",
-            "sunk_ship_morale_hit_recieved",
-            "technology_cost",
-            "tolerance_heathen",
-            "tolerance_heretic",
-            "tolerance_own",
-            "trade_company_investment_cost",
-            "trade_efficiency",
-            "trade_range_modifier",
-            "trade_steering",
-            "transport_cost",
-            "unjustified_demands",
-            "vassal_forcelimit_bonus",
-            "vassal_income",
-            "war_exhaustion",
-            "war_exhaustion_cost",
-            "yearly_absolutism",
-            "yearly_corruption",
-            "yearly_tribal_allegiance",
-            "years_of_nationalism"});
-            this.IdeaListBox.Location = new System.Drawing.Point(6, 41);
-            this.IdeaListBox.Name = "IdeaListBox";
-            this.IdeaListBox.Size = new System.Drawing.Size(260, 312);
-            this.IdeaListBox.Sorted = true;
-            this.IdeaListBox.TabIndex = 2;
-            this.IdeaListBox.SelectedIndexChanged += new System.EventHandler(this.IdeaListBox_SelectedIndexChanged);
             // 
             // SearchCountry
             // 
@@ -1220,58 +998,362 @@ namespace Eu4HackGUI
             "Trapalanda"});
             this.SearchCountry.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.SearchCountry.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.SearchCountry.Location = new System.Drawing.Point(7, 8);
+            this.SearchCountry.BackColor = System.Drawing.Color.DarkGray;
+            this.SearchCountry.Dock = System.Windows.Forms.DockStyle.Top;
+            this.SearchCountry.Location = new System.Drawing.Point(3, 3);
             this.SearchCountry.Name = "SearchCountry";
-            this.SearchCountry.Size = new System.Drawing.Size(755, 27);
+            this.SearchCountry.Size = new System.Drawing.Size(786, 27);
             this.SearchCountry.TabIndex = 1;
             this.SearchCountry.TextChanged += new System.EventHandler(this.SearchCountry_TextChanged);
             // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(3, 3, 5, 3);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.IdeaListBox);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.flowPanel);
+            this.splitContainer1.Panel2.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.splitContainer1.Size = new System.Drawing.Size(786, 387);
+            this.splitContainer1.SplitterDistance = 262;
+            this.splitContainer1.TabIndex = 4;
+            // 
+            // IdeaListBox
+            // 
+            this.IdeaListBox.BackColor = System.Drawing.Color.Gray;
+            this.IdeaListBox.CheckOnClick = true;
+            this.IdeaListBox.Dock = System.Windows.Forms.DockStyle.Left;
+            this.IdeaListBox.FormattingEnabled = true;
+            this.IdeaListBox.Items.AddRange(new object[] {
+            "adm_tech_cost_modifier",
+            "administrative_efficiency",
+            "advisor_cost",
+            "advisor_pool",
+            "ae_impact",
+            "allowed_marine_fraction",
+            "amount_of_banners",
+            "army_tradition",
+            "army_tradition_decay",
+            "army_tradition_from_battle",
+            "artillery_cost",
+            "artillery_fire",
+            "artillery_power",
+            "auto_explore_adjacent_to_colony",
+            "autonomy_change_time",
+            "backrow_artillery_damage",
+            "blockade_efficiency",
+            "build_cost",
+            "build_time",
+            "burghers_influence_modifier",
+            "burghers_loyalty_modifier",
+            "capture_ship_chance",
+            "caravan_power",
+            "cav_to_inf_ratio",
+            "cavalry_cost",
+            "cavalry_fire",
+            "cavalry_flanking",
+            "cavalry_power",
+            "church_loyalty_modifier",
+            "church_power_modifier",
+            "colonists",
+            "core_creation",
+            "culture_conversion_cost",
+            "defensiveness",
+            "development_cost",
+            "devotion",
+            "dip_tech_cost_modifier",
+            "diplomatic_annexation_cost",
+            "diplomatic_reputation",
+            "diplomatic_upkeep",
+            "diplomats",
+            "discipline",
+            "disengagement_chance",
+            "drill_gain_modifier",
+            "embargo_efficiency",
+            "embracement_cost",
+            "enforce_religion_cost",
+            "envoy_travel_time",
+            "expand_administration_cost",
+            "fabricate_claims_cost",
+            "female_advisor_chance",
+            "fire_damage",
+            "fire_damage_received",
+            "flagship_cost",
+            "fort_maintenance_modifier",
+            "free_adm_policy",
+            "free_dip_policy",
+            "free_leader_pool",
+            "free_mil_policy",
+            "galley_cost",
+            "galley_power",
+            "garrison_size",
+            "general_cost",
+            "global_autonomy",
+            "global_colonial_growth",
+            "global_foreign_trade_power",
+            "global_garrison_growth",
+            "global_heretic_missionary_strength",
+            "global_institution_spread",
+            "global_manpower_modifier",
+            "global_missionary_strength",
+            "global_naval_engagement_modifier",
+            "global_own_trade_power",
+            "global_prov_trade_power_modifier",
+            "global_regiment_cost",
+            "global_regiment_recruit_speed",
+            "global_sailors_modifier",
+            "global_ship_cost",
+            "global_ship_recruit_speed",
+            "global_ship_trade_power",
+            "global_spy_defence",
+            "global_tariffs",
+            "global_tax_modifier",
+            "global_trade_goods_size_modifier",
+            "global_trade_power",
+            "global_unrest",
+            "governing_capacity_modifier",
+            "harsh_treatment_cost",
+            "has_country_flag",
+            "heavy_ship_cost",
+            "heavy_ship_power",
+            "heir_chance",
+            "horde_unity",
+            "hostile_attrition",
+            "idea_claim_colonies",
+            "idea_cost",
+            "imperial_authority",
+            "imperial_authority_value",
+            "imperial_mandate",
+            "improve_relation_modifier",
+            "infantry_cost",
+            "infantry_power",
+            "inflation_reduction",
+            "interest",
+            "justify_trade_conflict_cost",
+            "land_attrition",
+            "land_forcelimit_modifier",
+            "land_maintenance_modifier",
+            "land_morale",
+            "leader_land_fire",
+            "leader_land_manuever",
+            "leader_land_shock",
+            "leader_naval_fire",
+            "leader_naval_manuever",
+            "leader_naval_shock",
+            "leader_siege",
+            "legitimacy",
+            "liberty_desire",
+            "liberty_desire_from_subject_development",
+            "light_ship_cost",
+            "light_ship_power",
+            "loot_amount",
+            "manpower_recovery_speed",
+            "max_revolutionary_zeal",
+            "may_establish_frontier",
+            "may_explore",
+            "may_perform_slave_raid",
+            "may_perform_slave_raid_on_same_religion",
+            "may_recruit_female_generals",
+            "merc_maintenance_modifier",
+            "mercenary_cost",
+            "mercenary_discipline",
+            "mercenary_manpower",
+            "merchants",
+            "meritocracy",
+            "migration_cost",
+            "mil_tech_cost_modifier",
+            "min_autonomy_in_territories",
+            "missionaries",
+            "missionary_maintenance_cost",
+            "monarch_diplomatic_power",
+            "monarch_military_power",
+            "monthly_fervor_increase",
+            "monthly_piety",
+            "movement_speed",
+            "native_assimilation",
+            "native_uprising_chance",
+            "naval_attrition",
+            "naval_forcelimit_modifier",
+            "naval_maintenance_modifier",
+            "naval_morale",
+            "naval_tradition_from_battle",
+            "navy_tradition",
+            "navy_tradition_decay",
+            "no_religion_penalty",
+            "nobles_loyalty_modifier",
+            "num_accepted_cultures",
+            "own_coast_naval_combat_bonus",
+            "papal_influence",
+            "placed_merchant_power",
+            "possible_dip_policy",
+            "possible_policy",
+            "power_projection_from_insults",
+            "prestige",
+            "prestige_decay",
+            "prestige_from_land",
+            "primary_culture",
+            "privateer_efficiency",
+            "production_efficiency",
+            "province_warscore_cost",
+            "range",
+            "rebel_support_efficiency",
+            "recover_army_morale_speed",
+            "recover_navy_morale_speed",
+            "reduced_liberty_desire",
+            "reelection_cost",
+            "reform_progress_growth",
+            "reinforce_cost_modifier",
+            "reinforce_speed",
+            "religion_group",
+            "religious_unity",
+            "republican_tradition",
+            "rival_border_fort_maintenance",
+            "sailor_maintenance_modifer",
+            "sailors_recovery_speed",
+            "same_culture_advisor_cost",
+            "ship_durability",
+            "ship_power_propagation",
+            "shock_damage",
+            "shock_damage_received",
+            "siege_ability",
+            "siege_blockade_progress",
+            "spy_offence",
+            "stability_cost_modifier",
+            "state_maintenance_modifier",
+            "sunk_ship_morale_hit_recieved",
+            "technology_cost",
+            "tolerance_heathen",
+            "tolerance_heretic",
+            "tolerance_own",
+            "trade_company_investment_cost",
+            "trade_efficiency",
+            "trade_range_modifier",
+            "trade_steering",
+            "transport_cost",
+            "unjustified_demands",
+            "vassal_forcelimit_bonus",
+            "vassal_income",
+            "war_exhaustion",
+            "war_exhaustion_cost",
+            "yearly_absolutism",
+            "yearly_corruption",
+            "yearly_tribal_allegiance",
+            "years_of_nationalism"});
+            this.IdeaListBox.Location = new System.Drawing.Point(0, 0);
+            this.IdeaListBox.Name = "IdeaListBox";
+            this.IdeaListBox.Size = new System.Drawing.Size(300, 387);
+            this.IdeaListBox.Sorted = true;
+            this.IdeaListBox.TabIndex = 2;
+            this.IdeaListBox.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.IdeaListBox_ItemCheck);
+            // 
+            // flowPanel
+            // 
+            this.flowPanel.AutoScroll = true;
+            this.flowPanel.AutoSize = true;
+            this.flowPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flowPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowPanel.Location = new System.Drawing.Point(0, 0);
+            this.flowPanel.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
+            this.flowPanel.Name = "flowPanel";
+            this.flowPanel.Padding = new System.Windows.Forms.Padding(40);
+            this.flowPanel.Size = new System.Drawing.Size(520, 387);
+            this.flowPanel.TabIndex = 3;
+            this.flowPanel.WrapContents = false;
+            // 
             // Hack
             // 
-            this.Hack.Controls.Add(this.HackCountryIdeas);
-            this.Hack.Location = new System.Drawing.Point(4, 29);
+            this.Hack.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.Hack.Controls.Add(this.SelectedTypesLabel);
+            this.Hack.Controls.Add(this.TypeCheckListBox);
+            this.Hack.Controls.Add(this.Run);
+            this.Hack.Location = new System.Drawing.Point(4, 31);
             this.Hack.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Hack.Name = "Hack";
             this.Hack.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Hack.Size = new System.Drawing.Size(768, 394);
+            this.Hack.Size = new System.Drawing.Size(792, 393);
             this.Hack.TabIndex = 2;
             this.Hack.Text = "Hack";
-            this.Hack.UseVisualStyleBackColor = true;
             // 
-            // HackCountryIdeas
+            // SelectedTypesLabel
             // 
-            this.HackCountryIdeas.Location = new System.Drawing.Point(3, 4);
-            this.HackCountryIdeas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.HackCountryIdeas.Name = "HackCountryIdeas";
-            this.HackCountryIdeas.Size = new System.Drawing.Size(217, 31);
-            this.HackCountryIdeas.TabIndex = 0;
-            this.HackCountryIdeas.Text = "HackCountryIdeas";
-            this.HackCountryIdeas.UseVisualStyleBackColor = true;
-            this.HackCountryIdeas.Click += new System.EventHandler(this.HackCountryIdeas_Click);
+            this.SelectedTypesLabel.AutoSize = true;
+            this.SelectedTypesLabel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.SelectedTypesLabel.Location = new System.Drawing.Point(234, 369);
+            this.SelectedTypesLabel.Name = "SelectedTypesLabel";
+            this.SelectedTypesLabel.Size = new System.Drawing.Size(106, 20);
+            this.SelectedTypesLabel.TabIndex = 2;
+            this.SelectedTypesLabel.Text = "None Selected";
+            // 
+            // TypeCheckListBox
+            // 
+            this.TypeCheckListBox.BackColor = System.Drawing.Color.Gray;
+            this.TypeCheckListBox.CheckOnClick = true;
+            this.TypeCheckListBox.Dock = System.Windows.Forms.DockStyle.Left;
+            this.TypeCheckListBox.FormattingEnabled = true;
+            this.TypeCheckListBox.Items.AddRange(new object[] {
+            "Country_Ideas",
+            "Provinces",
+            "Countries"});
+            this.TypeCheckListBox.Location = new System.Drawing.Point(3, 4);
+            this.TypeCheckListBox.Name = "TypeCheckListBox";
+            this.TypeCheckListBox.Size = new System.Drawing.Size(231, 385);
+            this.TypeCheckListBox.TabIndex = 1;
+            this.TypeCheckListBox.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.TypeCheckListBox_ItemCheck);
+            // 
+            // Run
+            // 
+            this.Run.Location = new System.Drawing.Point(243, 8);
+            this.Run.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Run.Name = "Run";
+            this.Run.Size = new System.Drawing.Size(217, 29);
+            this.Run.TabIndex = 0;
+            this.Run.Text = "Run";
+            this.Run.UseVisualStyleBackColor = true;
+            this.Run.Click += new System.EventHandler(this.Run_Click);
             // 
             // ProvinceSelection
             // 
-            this.ProvinceSelection.Location = new System.Drawing.Point(4, 29);
+            this.ProvinceSelection.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ProvinceSelection.Location = new System.Drawing.Point(4, 31);
             this.ProvinceSelection.Name = "ProvinceSelection";
-            this.ProvinceSelection.Size = new System.Drawing.Size(768, 394);
+            this.ProvinceSelection.Size = new System.Drawing.Size(792, 393);
             this.ProvinceSelection.TabIndex = 3;
             this.ProvinceSelection.Text = "ProvinceSelection";
-            this.ProvinceSelection.UseVisualStyleBackColor = true;
             // 
             // GUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 451);
+            this.AutoSize = true;
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ClientSize = new System.Drawing.Size(800, 428);
             this.Controls.Add(this.tabControl1);
+            this.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MinimumSize = new System.Drawing.Size(600, 467);
             this.Name = "GUI";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "GUI";
+            this.TopMost = true;
             this.tabControl1.ResumeLayout(false);
             this.DevTools.ResumeLayout(false);
             this.DevTools.PerformLayout();
             this.IdeaSelection.ResumeLayout(false);
             this.IdeaSelection.PerformLayout();
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            this.splitContainer1.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             this.Hack.ResumeLayout(false);
+            this.Hack.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1291,7 +1373,10 @@ namespace Eu4HackGUI
         private System.Windows.Forms.CheckedListBox IdeaListBox;
         private System.Windows.Forms.FlowLayoutPanel flowPanel;
         private TabPage Hack;
-        private Button HackCountryIdeas;
+        private Button Run;
         private TabPage ProvinceSelection;
+        private CheckedListBox TypeCheckListBox;
+        private SplitContainer splitContainer1;
+        private Label SelectedTypesLabel;
     }
 }

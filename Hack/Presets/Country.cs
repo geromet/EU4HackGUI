@@ -5,7 +5,7 @@
         private static string fileName = "Hol - Holland.txt";
         private static string backupDir = "Files/backup/history/countries";
         private static string sourceDir = "Files/history/countries";
-        private static string destinationDir = "e:/Steam/steamapps/common/Europa Universalis IV/history/countries";
+        private static string destinationDir = "C:/Program Files (x86)/Steam/steamapps/common/Europa Universalis IV/history/countries";
         private static string searchString = "LeaderPersonalities loaded";
         private static int copyDelay = 0;
 

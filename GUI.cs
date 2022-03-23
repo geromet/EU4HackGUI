@@ -33,43 +33,50 @@ namespace Eu4HackGUI
         {
             MakeIdeaList.DoTheThing();
         }
-        private void IdeaListBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void IdeaListBox_ItemCheck(object sender, ItemCheckEventArgs e)
         {
-            foreach(var idea in IdeaListBox.CheckedItems)
+            Control Sender = (Control)sender;
+            IdeaControl ideaControl = new IdeaControl();
+            ideaControl.SetLabel(Sender.Text);
+            ideaControl.Name = Sender.Text;
+            if (!IdeaListBox.CheckedItems.Contains(Sender.Text))
             {
-                if (!Controller.GetSelectedIdeas().Contains(idea.ToString()))
-                {
-                    Controller.AddIdea(idea.ToString());
-                    IdeaControl ideaControl = new IdeaControl();
-                    ideaControl.SetLabel(idea.ToString());
-                    ideaControl.Name = idea.ToString();
-                    flowPanel.Controls.Add(ideaControl);
-                }
-
+                Controller.AddIdea(Sender.Text);
+                flowPanel.Controls.Add(ideaControl);
             }
-            foreach(string selectedIdea in Controller.GetSelectedIdeas())
+            else
             {
-                if (!IdeaListBox.CheckedItems.Contains(selectedIdea))
-                {
-                    foreach(Control ideaControl in flowPanel.Controls)
-                    {
-                        if (ideaControl.Name == selectedIdea)
-                        {
-                            flowPanel.Controls.Remove(ideaControl);
-                            Controller.RemoveIdea(selectedIdea);
-                            break;
-                        }
-                    }
-                    break;
-                }
-            }            
+                Controller.RemoveIdea(Sender.Text);
+                flowPanel.Controls.Remove(flowPanel.Controls.Find(ideaControl.Name, false)[0]);
+            }
         }
-
-        private void HackCountryIdeas_Click(object sender, EventArgs e)
+        private void Run_Click(object sender, EventArgs e)
         {
             Eu4HackGUI.Hack.Hack.Run(1, 1);
         }
 
+        private void TypeCheckListBox_ItemCheck(object sender, EventArgs e)
+        {
+            Control Sender = (Control)sender;
+            if (!TypeCheckListBox.CheckedItems.Contains(Sender.Text))
+            {
+                Controller.AddType(Sender.Text);
+            }
+            else
+            {
+                Controller.RemoveType(Sender.Text);
+            }
+            string text = "";
+            foreach(string type in Controller.GetSelectedTypes())
+            {
+                text += type + "    ";
+            }
+            if(text == "")
+            {
+                text = "None selected";
+            }
+            SelectedTypesLabel.Text = text;
+        }
 
     }
 }

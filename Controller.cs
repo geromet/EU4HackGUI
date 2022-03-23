@@ -6,6 +6,7 @@ namespace Eu4HackGUI
 	{
 		private static string countryTag;
 		private static List<string> selectedIdeas = new List<string>();
+		private static List<string> selectedTypes = new List<string>();
 
 		public static void SetCountryTag(string CountryName)
 		{
@@ -4291,6 +4292,18 @@ namespace Eu4HackGUI
 		public static void RemoveIdea(string idea)
         {
 			selectedIdeas.Remove(idea);
+        }
+		public static void AddType(string type)
+        {
+			selectedTypes.Add(type);
+        }
+		public static List<string> GetSelectedTypes()
+        {
+			return selectedTypes;
+        }
+		public static void RemoveType(string type)
+        {
+			selectedTypes.Remove(type);
         }
 	}
 }
