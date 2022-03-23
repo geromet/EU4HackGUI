@@ -36,8 +36,8 @@ namespace Eu4HackGUI
         {
             Control Sender = (Control)sender;
             IdeaControl ideaControl = new();
-            ideaControl.Text = Sender.Text;
             ideaControl.Name = Sender.Text;
+            ideaControl.SetLabel(Sender.Text);
             if (!IdeaListBox.CheckedItems.Contains(Sender.Text))
             {
                 Controller.AddIdea(Sender.Text);

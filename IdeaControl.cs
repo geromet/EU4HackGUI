@@ -17,6 +17,10 @@ namespace Eu4HackGUI
         {
             InitializeComponent();
         }
+        public void SetLabel(string label)
+        {
+            Idea.Text = label;
+        }
         private void Add_Click(object sender, EventArgs e) => Value.Text = SetValue(Math.Round(Double.Parse(Value.Text)+0.1f, 2).ToString());            
         private void Value_TextChanged(object sender, EventArgs e) => SetValue(Value.Text);
         private void Substract_Click(object sender, EventArgs e) => Value.Text = SetValue(Math.Round(Double.Parse(Value.Text)-0.1f, 2).ToString());
