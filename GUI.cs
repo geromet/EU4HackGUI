@@ -35,7 +35,7 @@ namespace Eu4HackGUI
                 Run.Text = "Running";
                 Run.Enabled = false;
                 RunHackAsync();
-                CheckHackRunning();
+                WaitForHack();
             }
             
 
@@ -44,11 +44,12 @@ namespace Eu4HackGUI
         private async void WaitForHack() => await Task.Run(() => CheckHackRunning());
         private void CheckHackRunning()
         {
-            if(!Controller.HackIsRunning)
+            while(Controller.HackIsRunning)
             {
-                Run.Enabled = true;
-                Run.Text = "Stopped";
+
             }
+            Run.Enabled = true;
+            Run.Text = "Stopped";
         }
 
         private void TypeCheckListBox_ItemCheck(object sender, EventArgs e) => TypeItemCheck(sender);
