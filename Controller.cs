@@ -4281,13 +4281,14 @@ namespace Eu4HackGUI
 			countryTag = CountryTag;
 		}
 		public static string GetCountryTag() => countryTag;
-		public static void AddIdea(string idea)
-        {
-			selectedIdeas.Add(idea);
-        }
+
 		public static List<string> GetSelectedIdeas()
         {
 			return selectedIdeas;	
+        }
+		public static void AddIdea(string idea)
+        {
+			selectedIdeas.Add(idea);
         }
 		public static void RemoveIdea(string idea)
         {

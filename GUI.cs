@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using Eu4HackGUI.CodeGen;
 
@@ -29,15 +30,13 @@ namespace Eu4HackGUI
             SelectedCountry.Text = Controller.GetCountryTag();
         }
 
-        private void CreateIdeaList_Click(object sender, EventArgs e)
-        {
-            MakeIdeaList.DoTheThing();
-        }
+        private async void CreateIdeaList_Click(object sender, EventArgs e) => await Task.Run(() => MakeIdeaList.DoTheThing());
+ 
         private void IdeaListBox_ItemCheck(object sender, ItemCheckEventArgs e)
         {
             Control Sender = (Control)sender;
-            IdeaControl ideaControl = new IdeaControl();
-            ideaControl.SetLabel(Sender.Text);
+            IdeaControl ideaControl = new();
+            ideaControl.Text = Sender.Text;
             ideaControl.Name = Sender.Text;
             if (!IdeaListBox.CheckedItems.Contains(Sender.Text))
             {
@@ -50,10 +49,7 @@ namespace Eu4HackGUI
                 flowPanel.Controls.Remove(flowPanel.Controls.Find(ideaControl.Name, false)[0]);
             }
         }
-        private void Run_Click(object sender, EventArgs e)
-        {
-            Eu4HackGUI.Hack.Hack.Run(1, 1);
-        }
+        private void Run_Click(object sender, EventArgs e) => Eu4HackGUI.Hack.Hack.Run(1, 1);
 
         private void TypeCheckListBox_ItemCheck(object sender, EventArgs e)
         {

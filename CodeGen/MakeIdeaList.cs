@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Threading;
+using System.Collections.Generic;
 using System.IO;
 
 namespace Eu4HackGUI.CodeGen

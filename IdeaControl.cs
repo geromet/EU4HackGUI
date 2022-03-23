@@ -17,43 +17,14 @@ namespace Eu4HackGUI
         {
             InitializeComponent();
         }
-        public int Id { get; set; }
-        public void SetLabel(string label)
-        {
-            Idea.Text = label;
-        }
-
-        private void Add_Click(object sender, EventArgs e)
-        { 
-            double value = Double.Parse(Value.Text);
-            value += 0.1f;
-            Value.Text = Math.Round(value, 2).ToString();
-        }
-
-        private void Value_TextChanged(object sender, EventArgs e)
-        {
-            CheckNumeric();
-        }
-
-        private void Substract_Click(object sender, EventArgs e)
-        {
-            double value = Double.Parse(Value.Text);
-            value -= 0.1f;
-            Value.Text = Math.Round(value, 2).ToString();
-        }
-
-        void CheckNumeric()
-        {
-            if (Value.Text.StartsWith(","))
-            {
-                Value.Text = "0";
-            }
-            if (Value.Text.Length == 0)
-            {
-                Value.Text = "0";
-            }
-            
-            Value.Text = Math.Round(Double.Parse(Regex.Replace(Value.Text, "[^-,0-9]", "")), 2).ToString();
-        }
+        private void Add_Click(object sender, EventArgs e) => Value.Text = SetValue(Math.Round(Double.Parse(Value.Text)+0.1f, 2).ToString());            
+        private void Value_TextChanged(object sender, EventArgs e) => SetValue(Value.Text);
+        private void Substract_Click(object sender, EventArgs e) => Value.Text = SetValue(Math.Round(Double.Parse(Value.Text)-0.1f, 2).ToString());
+        private string SetValue(string value) => 
+            value.StartsWith(",") || 
+            value.Length == 0 || 
+            value == "-0" 
+                ? value = "0" 
+                : value = (Math.Round(Double.Parse(Regex.Replace(value, "[^-,0-9]", "")), 2).ToString());
     }
 }
