@@ -15,7 +15,7 @@ namespace Eu4HackGUI.CodeGen
         static readonly string dataFolder = "/Data/";
         static readonly string countryListName = "CountryList.txt";
         static readonly string countryListPath = (currentFolder + dataFolder + countryListName).ToString();
-        public static void DoTheThing()
+        public static void Run()
         {
             using (StreamWriter streamWriter = new StreamWriter(currentFolder + dataFolder + "CountrySelectorSwitch.txt"))
             {

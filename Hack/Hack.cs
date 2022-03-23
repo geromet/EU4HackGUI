@@ -86,7 +86,7 @@ namespace Eu4HackGUI.Hack
                 }
                 
             }
-            
+            Controller.HackIsRunning = false;    
         }
 
         private static void WaitForGame()

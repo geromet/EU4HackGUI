@@ -4,10 +4,18 @@ namespace Eu4HackGUI
 {
 	public class Controller
 	{
+		public static bool HackIsRunning = false;
 		private static string countryTag;
-		private static List<string> selectedIdeas = new List<string>();
-		private static List<string> selectedTypes = new List<string>();
+		private static List<string> selectedIdeas = new();
+		private static List<string> selectedTypes = new();
 
+		public static List<string> GetSelectedIdeas() => selectedIdeas;
+		public static void AddIdea(string idea) => selectedIdeas.Add(idea);
+		public static void RemoveIdea(string idea) => selectedIdeas.Remove(idea);
+		public static void AddType(string type) => selectedTypes.Add(type);
+		public static List<string> GetSelectedTypes() => selectedTypes;
+		public static void RemoveType(string type) => selectedTypes.Remove(type);
+		public static string GetCountryTag() => countryTag;
 		public static void SetCountryTag(string CountryName)
 		{
 			string CountryTag = "";
@@ -4279,32 +4287,6 @@ namespace Eu4HackGUI
 					}
 			}
 			countryTag = CountryTag;
-		}
-		public static string GetCountryTag() => countryTag;
-
-		public static List<string> GetSelectedIdeas()
-        {
-			return selectedIdeas;	
-        }
-		public static void AddIdea(string idea)
-        {
-			selectedIdeas.Add(idea);
-        }
-		public static void RemoveIdea(string idea)
-        {
-			selectedIdeas.Remove(idea);
-        }
-		public static void AddType(string type)
-        {
-			selectedTypes.Add(type);
-        }
-		public static List<string> GetSelectedTypes()
-        {
-			return selectedTypes;
-        }
-		public static void RemoveType(string type)
-        {
-			selectedTypes.Remove(type);
-        }
+		}	
 	}
 }
