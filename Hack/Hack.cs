@@ -10,14 +10,12 @@ namespace Eu4HackGUI.Hack
     public class Hack
     {
         private static int _readDelay;
-        private static int _gameLoadDelay;
-
-        private static List<Type> _types = new List<Type>();
-        private static List<Type> _usedTypes = new List<Type>();
+        private static List<Type> _types = new();
+        private static List<Type> _usedTypes = new();
 
         public static void AddType(string fileName, string backupDir, string sourceDir, string destinationDir, string searchString, int copyDelay)
         {
-            Type type = new Type();
+            Type type = new();
             type.Set(fileName, backupDir, sourceDir, destinationDir, searchString,copyDelay);
             _types.Add(type);
         }
@@ -47,11 +45,12 @@ namespace Eu4HackGUI.Hack
             Country.Add();
             Province.Add();
             _readDelay = 200;//200
-            _gameLoadDelay = 5000;//5000
         }
        
         public static void Run(int copyDelay, int readDelay)
         {
+            Process thisProc = Process.GetCurrentProcess();
+            thisProc.PriorityClass = ProcessPriorityClass.BelowNormal;
             Initialize(copyDelay, readDelay);
             Clean();
             WaitForGame();
@@ -62,15 +61,45 @@ namespace Eu4HackGUI.Hack
                 using (reader)
                 {
                     string line;
+                    int nullDelay = 0;
+                    int nulls = 0;
+                    int reads = 0;
+                    bool sleeping = true;
                     Thread.Sleep(_readDelay);
                     while (_types.Count > 0)
                     {
+                        DateTime lastTime = DateTime.Now;
                         line = reader.ReadLine();
                         if (line == null)
                         {
+                            nulls++;
+                            DateTime currentTime = DateTime.Now;
+                            if (nulls < 1.5 * reads)
+                            {
+                                nullDelay -= (currentTime.Millisecond - lastTime.Millisecond);
+                            }
+                            else if (nulls > 8 * reads)
+                            {
+                                nullDelay += 4 * (currentTime.Millisecond - lastTime.Millisecond);
+                            }
+                            else if (nulls > 4 * reads)
+                            {
+                                nullDelay += 2 * (currentTime.Millisecond - lastTime.Millisecond);
+                            }
+                            else if (nulls > 2 * reads)
+                            {
+                                sleeping = true;
+                                nullDelay += (currentTime.Millisecond - lastTime.Millisecond);
+                            }
+                            else
+                            {
+                                sleeping = false;
+                            }
+                            Thread.Sleep(nullDelay);
                             continue;
                         }
-                        List<Type> types = new List<Type>();
+                        if(sleeping) reads++;
+                         List <Type> types = new List<Type>();
                         foreach (Type type in _types)
                         {
                             if (type.TryCopy(line))
@@ -83,21 +112,16 @@ namespace Eu4HackGUI.Hack
                             _types.Remove(type);
                         }
                     }
-                }
-                
+                }    
             }
             Controller.HackIsRunning = false;    
         }
 
         private static void WaitForGame()
         {
-            while (true)
+            while (!File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/Paradox Interactive/Europa Universalis IV/logs/setup.log"))
             {
-                if (System.IO.File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/Paradox Interactive/Europa Universalis IV/logs/setup.log"))
-                {
-                    Thread.Sleep(_gameLoadDelay);
-                    break;
-                }
+                Thread.Sleep(500);
             }
                 
         }

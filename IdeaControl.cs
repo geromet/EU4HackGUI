@@ -27,5 +27,7 @@ namespace Eu4HackGUI
             value == "-0" 
                 ? value = "0" 
                 : value = (Math.Round(Double.Parse(Regex.Replace(value, "[^-,0-9]", "")), 2).ToString());
+
+
     }
 }
