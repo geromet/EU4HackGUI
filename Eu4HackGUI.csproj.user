@@ -1,14 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <_LastSelectedProfileId>C:\Users\gerom\Desktop\Eu4HackGUI\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
+    <_LastSelectedProfileId>C:\Users\gerom\Desktop\Eu4HackGUI\Properties\PublishProfiles\ClickOnceProfile.pubxml</_LastSelectedProfileId>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Update="%24RNR0V64.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="GUI.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="IdeaControl.cs">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Temp.cs">
+      <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
 </Project>

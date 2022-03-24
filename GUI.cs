@@ -11,18 +11,15 @@ namespace Eu4HackGUI
     public partial class GUI : Form
     {
         private Dictionary<TabPage, Color> TabColors = new Dictionary<TabPage, Color>();
-        public GUI()
+        public GUI() 
         {
             InitializeComponent();
-            FixTabs();
+            HackPanel.Visible = false;
+            IdeasPanel.Visible = false;
+            DevToolsPanel.Visible = false;
+            ProvincesPanel.Visible = false;
         }
-        private void FixTabs()
-        {
-            SetTabHeader(DevTools, Color.Black);
-            SetTabHeader(ProvinceSelection, Color.Black);
-            SetTabHeader(IdeaSelection, Color.Black);
-            SetTabHeader(Hack, Color.Black);
-        }
+        
         private async void CreateCountryList_Click(object sender, EventArgs e) => await Task.Run(() => MakeCountryNameList.Run());
         private async void CreateCountrySelectionSwitch_Click(object sender, EventArgs e) => await Task.Run(() => MakeCountrySelectorSwitchCode.Run());        
         private async void CreateIdeaList_Click(object sender, EventArgs e) => await Task.Run(() => MakeIdeaList.Run());
@@ -105,27 +102,22 @@ namespace Eu4HackGUI
                 flowPanel.Controls.Remove(flowPanel.Controls.Find(ideaControl.Name, false)[0]);
             }
         }
-        private void Tabs_DrawItem(object sender, DrawItemEventArgs e)
-        {
-            //e.DrawBackground();
-            using (Brush br = new SolidBrush(TabColors[Tabs.TabPages[e.Index]]))
-            {
-                e.Graphics.FillRectangle(br, e.Bounds);
-                SizeF sz = e.Graphics.MeasureString(Tabs.TabPages[e.Index].Text, e.Font);
-                e.Graphics.DrawString(Tabs.TabPages[e.Index].Text, e.Font, Brushes.WhiteSmoke, e.Bounds.Left + (e.Bounds.Width - sz.Width) / 2, e.Bounds.Top + (e.Bounds.Height - sz.Height) / 2 + 1);
 
-                Rectangle rect = e.Bounds;
-                rect.Offset(0, 1);
-                rect.Inflate(0, -1);
-                e.Graphics.DrawRectangle(Pens.DarkGray, rect);
-                e.DrawFocusRectangle();
-            }
-        }
-        
-        private void SetTabHeader(TabPage page, Color color)
+        private void DevToolsButton_Click(object sender, EventArgs e) => TogglePanels(DevToolsPanel);
+        private void IdeasButton_Click(object sender, EventArgs e) => TogglePanels(IdeasPanel);
+        private void ProvincesButton_Click(object sender, EventArgs e) => TogglePanels(ProvincesPanel);
+        private void HackButton_Click(object sender, EventArgs e)=> TogglePanels(HackPanel);
+        private void TogglePanels(Panel sender)
         {
-            TabColors[page] = color;
-            Tabs.Invalidate();
+            sender.Visible = true;
+            foreach (Panel panel in this.Controls)
+            {
+                if(panel == sender||panel ==MenuPanel)
+                {
+                    continue;
+                }
+                panel.Visible = false;
+            }
         }
     }
 }

@@ -1,10 +1,6 @@
-﻿using System.Collections.Generic;
-using System.Drawing;
-using System.Windows.Forms;
-
-namespace Eu4HackGUI
+﻿namespace Eu4HackGUI
 {
-    partial class GUI
+    partial class Temp
     {
         /// <summary>
         /// Required designer variable.
@@ -32,23 +28,7 @@ namespace Eu4HackGUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.Main = new System.Windows.Forms.SplitContainer();
-            this.MenuPanel = new System.Windows.Forms.Panel();
-            this.DevToolsPanel = new System.Windows.Forms.Panel();
-            this.CreateIdeaList = new System.Windows.Forms.Button();
-            this.CreateCountrySelectionSwitch = new System.Windows.Forms.Button();
-            this.CreateCountryList = new System.Windows.Forms.Button();
-            this.SelectedCountry = new System.Windows.Forms.Label();
-            this.Divider = new System.Windows.Forms.SplitContainer();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.HackButton = new System.Windows.Forms.Button();
-            this.IdeasButton = new System.Windows.Forms.Button();
-            this.ProvincesButton = new System.Windows.Forms.Button();
-            this.DevToolsButton = new System.Windows.Forms.Button();
-            this.HackPanel = new System.Windows.Forms.Panel();
-            this.IdeasPanel = new System.Windows.Forms.Panel();
-            this.ProvincesPanel = new System.Windows.Forms.Panel();
+            this.MenuContainer = new System.Windows.Forms.SplitContainer();
             this.IdeaSelection = new System.Windows.Forms.SplitContainer();
             this.IdeaListBox = new System.Windows.Forms.CheckedListBox();
             this.HorizontalContainer = new System.Windows.Forms.SplitContainer();
@@ -58,26 +38,8 @@ namespace Eu4HackGUI
             this.TypeCheckListBox = new System.Windows.Forms.CheckedListBox();
             this.Run = new System.Windows.Forms.Button();
             this.SelectedTypesLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.Main)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.Main.SuspendLayout();
-            this.MenuPanel.SuspendLayout();
-            this.DevToolsPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Divider)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.Divider.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
-            this.splitContainer2.Panel1.SuspendLayout();
-            this.splitContainer2.Panel2.SuspendLayout();
-            this.splitContainer2.SuspendLayout();
-            this.HackPanel.SuspendLayout();
-            this.IdeasPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MenuContainer)).BeginInit();
+            this.MenuContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IdeaSelection)).BeginInit();
             this.IdeaSelection.Panel1.SuspendLayout();
             this.IdeaSelection.Panel2.SuspendLayout();
@@ -92,258 +54,18 @@ namespace Eu4HackGUI
             this.Hack.SuspendLayout();
             this.SuspendLayout();
             // 
-            // Main
+            // MenuContainer
             // 
-            this.Main.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Main.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.Main.IsSplitterFixed = true;
-            this.Main.Location = new System.Drawing.Point(10, 10);
-            this.Main.Name = "Main";
-            // 
-            // Main.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.MenuPanel);
-            // 
-            // Main.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.ProvincesPanel);
-            this.splitContainer1.Panel2.Controls.Add(this.IdeasPanel);
-            this.splitContainer1.Panel2.Controls.Add(this.HackPanel);
-            this.splitContainer1.Panel2.Controls.Add(this.DevToolsPanel);
-            this.Main.Size = new System.Drawing.Size(780, 408);
-            this.Main.SplitterDistance = 120;
-            this.Main.SplitterWidth = 1;
-            this.Main.TabIndex = 4;
-            // 
-            // MenuPanel
-            // 
-            this.MenuPanel.Controls.Add(this.Divider);
-            this.MenuPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MenuPanel.Location = new System.Drawing.Point(0, 0);
-            this.MenuPanel.Name = "MenuPanel";
-            this.MenuPanel.Size = new System.Drawing.Size(120, 408);
-            this.MenuPanel.TabIndex = 0;
-            // 
-            // DevToolsPanel
-            // 
-            this.DevToolsPanel.Controls.Add(this.SelectedCountry);
-            this.DevToolsPanel.Controls.Add(this.CreateCountryList);
-            this.DevToolsPanel.Controls.Add(this.CreateCountrySelectionSwitch);
-            this.DevToolsPanel.Controls.Add(this.CreateIdeaList);
-            this.DevToolsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DevToolsPanel.Location = new System.Drawing.Point(0, 0);
-            this.DevToolsPanel.Margin = new System.Windows.Forms.Padding(10, 10, 3, 3);
-            this.DevToolsPanel.Name = "DevToolsPanel";
-            this.DevToolsPanel.Size = new System.Drawing.Size(659, 408);
-            this.DevToolsPanel.TabIndex = 13;
-            // 
-            // CreateIdeaList
-            // 
-            this.CreateIdeaList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.CreateIdeaList.Dock = System.Windows.Forms.DockStyle.Top;
-            this.CreateIdeaList.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.CreateIdeaList.FlatAppearance.BorderSize = 0;
-            this.CreateIdeaList.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.CreateIdeaList.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.CreateIdeaList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CreateIdeaList.ForeColor = System.Drawing.Color.DarkGray;
-            this.CreateIdeaList.Location = new System.Drawing.Point(0, 0);
-            this.CreateIdeaList.Margin = new System.Windows.Forms.Padding(0);
-            this.CreateIdeaList.Name = "CreateIdeaList";
-            this.CreateIdeaList.Size = new System.Drawing.Size(659, 28);
-            this.CreateIdeaList.TabIndex = 13;
-            this.CreateIdeaList.Text = "CreateIdeaList";
-            this.CreateIdeaList.UseVisualStyleBackColor = false;
-            // 
-            // CreateCountrySelectionSwitch
-            // 
-            this.CreateCountrySelectionSwitch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.CreateCountrySelectionSwitch.Dock = System.Windows.Forms.DockStyle.Top;
-            this.CreateCountrySelectionSwitch.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.CreateCountrySelectionSwitch.FlatAppearance.BorderSize = 0;
-            this.CreateCountrySelectionSwitch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.CreateCountrySelectionSwitch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.CreateCountrySelectionSwitch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CreateCountrySelectionSwitch.ForeColor = System.Drawing.Color.DarkGray;
-            this.CreateCountrySelectionSwitch.Location = new System.Drawing.Point(0, 28);
-            this.CreateCountrySelectionSwitch.Margin = new System.Windows.Forms.Padding(0);
-            this.CreateCountrySelectionSwitch.Name = "CreateCountrySelectionSwitch";
-            this.CreateCountrySelectionSwitch.Size = new System.Drawing.Size(659, 28);
-            this.CreateCountrySelectionSwitch.TabIndex = 14;
-            this.CreateCountrySelectionSwitch.Text = "Create Country Selection Switch";
-            this.CreateCountrySelectionSwitch.UseVisualStyleBackColor = false;
-            // 
-            // CreateCountryList
-            // 
-            this.CreateCountryList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.CreateCountryList.Dock = System.Windows.Forms.DockStyle.Top;
-            this.CreateCountryList.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.CreateCountryList.FlatAppearance.BorderSize = 0;
-            this.CreateCountryList.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.CreateCountryList.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.CreateCountryList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CreateCountryList.ForeColor = System.Drawing.Color.DarkGray;
-            this.CreateCountryList.Location = new System.Drawing.Point(0, 56);
-            this.CreateCountryList.Margin = new System.Windows.Forms.Padding(0);
-            this.CreateCountryList.Name = "CreateCountryList";
-            this.CreateCountryList.Size = new System.Drawing.Size(659, 28);
-            this.CreateCountryList.TabIndex = 15;
-            this.CreateCountryList.Text = "Create country list";
-            this.CreateCountryList.UseVisualStyleBackColor = false;
-            // 
-            // SelectedCountry
-            // 
-            this.SelectedCountry.AutoSize = true;
-            this.SelectedCountry.ForeColor = System.Drawing.Color.DarkGray;
-            this.SelectedCountry.Location = new System.Drawing.Point(269, 194);
-            this.SelectedCountry.Name = "SelectedCountry";
-            this.SelectedCountry.Size = new System.Drawing.Size(121, 20);
-            this.SelectedCountry.TabIndex = 16;
-            this.SelectedCountry.Text = "Selected Country";
-            // 
-            // Divider
-            // 
-            this.Divider.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Divider.Location = new System.Drawing.Point(0, 0);
-            this.Divider.Name = "Divider";
-            this.Divider.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // Divider.Panel1
-            // 
-            //this.splitContainer1.Panel1.Controls.Add(this.splitContainer1);
-            // 
-            // Divider.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.Divider.Size = new System.Drawing.Size(120, 408);
-            this.Divider.SplitterDistance = 204;
-            this.Divider.TabIndex = 0;
-            // 
-            // splitContainer1
-            // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Name = "splitContainer1";
-            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.HackButton);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.IdeasButton);
-            this.splitContainer1.Size = new System.Drawing.Size(120, 204);
-            this.splitContainer1.SplitterDistance = 102;
-            this.splitContainer1.TabIndex = 1;
-            // 
-            // splitContainer2
-            // 
-            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer2.Name = "splitContainer2";
-            this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer2.Panel1
-            // 
-            this.splitContainer2.Panel1.Controls.Add(this.ProvincesButton);
-            // 
-            // splitContainer2.Panel2
-            // 
-            this.splitContainer2.Panel2.Controls.Add(this.DevToolsButton);
-            this.splitContainer2.Size = new System.Drawing.Size(120, 200);
-            this.splitContainer2.SplitterDistance = 100;
-            this.splitContainer2.TabIndex = 1;
-            // 
-            // HackButton
-            // 
-            this.HackButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.HackButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.HackButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.HackButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.HackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.HackButton.ForeColor = System.Drawing.Color.DimGray;
-            this.HackButton.Location = new System.Drawing.Point(0, 0);
-            this.HackButton.Name = "HackButton";
-            this.HackButton.Size = new System.Drawing.Size(120, 102);
-            this.HackButton.TabIndex = 0;
-            this.HackButton.Text = "Hack";
-            this.HackButton.UseVisualStyleBackColor = true;
-            this.HackButton.Click += new System.EventHandler(this.HackButton_Click);
-            // 
-            // IdeasButton
-            // 
-            this.IdeasButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.IdeasButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.IdeasButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.IdeasButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.IdeasButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IdeasButton.ForeColor = System.Drawing.Color.DimGray;
-            this.IdeasButton.Location = new System.Drawing.Point(0, 0);
-            this.IdeasButton.Name = "IdeasButton";
-            this.IdeasButton.Size = new System.Drawing.Size(120, 98);
-            this.IdeasButton.TabIndex = 1;
-            this.IdeasButton.Text = "Ideas";
-            this.IdeasButton.UseVisualStyleBackColor = true;
-            this.IdeasButton.Click += new System.EventHandler(this.IdeasButton_Click);
-            // 
-            // ProvincesButton
-            // 
-            this.ProvincesButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ProvincesButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.ProvincesButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ProvincesButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.ProvincesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ProvincesButton.ForeColor = System.Drawing.Color.DimGray;
-            this.ProvincesButton.Location = new System.Drawing.Point(0, 0);
-            this.ProvincesButton.Name = "ProvincesButton";
-            this.ProvincesButton.Size = new System.Drawing.Size(120, 100);
-            this.ProvincesButton.TabIndex = 1;
-            this.ProvincesButton.Text = "Provinces";
-            this.ProvincesButton.UseVisualStyleBackColor = true;
-            this.ProvincesButton.Click += new System.EventHandler(this.ProvincesButton_Click);
-            // 
-            // DevToolsButton
-            // 
-            this.DevToolsButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DevToolsButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.DevToolsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.DevToolsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.DevToolsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DevToolsButton.ForeColor = System.Drawing.Color.DimGray;
-            this.DevToolsButton.Location = new System.Drawing.Point(0, 0);
-            this.DevToolsButton.Name = "DevToolsButton";
-            this.DevToolsButton.Size = new System.Drawing.Size(120, 96);
-            this.DevToolsButton.TabIndex = 1;
-            this.DevToolsButton.Text = "Dev Tools";
-            this.DevToolsButton.UseVisualStyleBackColor = true;
-            this.DevToolsButton.Click += new System.EventHandler(this.DevToolsButton_Click);
-            // 
-            // HackPanel
-            // 
-            this.HackPanel.Controls.Add(this.Hack);
-            this.HackPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.HackPanel.Location = new System.Drawing.Point(0, 0);
-            this.HackPanel.Name = "HackPanel";
-            this.HackPanel.Size = new System.Drawing.Size(659, 408);
-            this.HackPanel.TabIndex = 17;
-            // 
-            // IdeasPanel
-            // 
-            this.IdeasPanel.Controls.Add(this.IdeaSelection);
-            this.IdeasPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.IdeasPanel.Location = new System.Drawing.Point(0, 0);
-            this.IdeasPanel.Name = "IdeasPanel";
-            this.IdeasPanel.Size = new System.Drawing.Size(659, 408);
-            this.IdeasPanel.TabIndex = 18;
-            // 
-            // ProvincesPanel
-            // 
-            this.ProvincesPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ProvincesPanel.Location = new System.Drawing.Point(0, 0);
-            this.ProvincesPanel.Name = "ProvincesPanel";
-            this.ProvincesPanel.Size = new System.Drawing.Size(659, 408);
-            this.ProvincesPanel.TabIndex = 19;
+            this.MenuContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
+            this.MenuContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MenuContainer.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.MenuContainer.IsSplitterFixed = true;
+            this.MenuContainer.Location = new System.Drawing.Point(0, 0);
+            this.MenuContainer.Name = "MenuContainer";
+            this.MenuContainer.Size = new System.Drawing.Size(800, 450);
+            this.MenuContainer.SplitterDistance = 200;
+            this.MenuContainer.SplitterWidth = 1;
+            this.MenuContainer.TabIndex = 3;
             // 
             // IdeaSelection
             // 
@@ -362,10 +84,10 @@ namespace Eu4HackGUI
             // IdeaSelection.Panel2
             // 
             this.IdeaSelection.Panel2.Controls.Add(this.HorizontalContainer);
-            this.IdeaSelection.Size = new System.Drawing.Size(659, 408);
+            this.IdeaSelection.Size = new System.Drawing.Size(800, 450);
             this.IdeaSelection.SplitterDistance = 200;
             this.IdeaSelection.SplitterWidth = 1;
-            this.IdeaSelection.TabIndex = 5;
+            this.IdeaSelection.TabIndex = 4;
             this.IdeaSelection.Visible = false;
             // 
             // IdeaListBox
@@ -592,7 +314,7 @@ namespace Eu4HackGUI
             "years_of_nationalism"});
             this.IdeaListBox.Location = new System.Drawing.Point(0, 0);
             this.IdeaListBox.Name = "IdeaListBox";
-            this.IdeaListBox.Size = new System.Drawing.Size(200, 408);
+            this.IdeaListBox.Size = new System.Drawing.Size(200, 450);
             this.IdeaListBox.Sorted = true;
             this.IdeaListBox.TabIndex = 3;
             // 
@@ -612,7 +334,7 @@ namespace Eu4HackGUI
             // HorizontalContainer.Panel2
             // 
             this.HorizontalContainer.Panel2.Controls.Add(this.flowPanel);
-            this.HorizontalContainer.Size = new System.Drawing.Size(458, 408);
+            this.HorizontalContainer.Size = new System.Drawing.Size(599, 450);
             this.HorizontalContainer.SplitterDistance = 25;
             this.HorizontalContainer.TabIndex = 6;
             // 
@@ -1478,7 +1200,7 @@ namespace Eu4HackGUI
             this.SearchCountry.ForeColor = System.Drawing.Color.DarkGray;
             this.SearchCountry.Location = new System.Drawing.Point(0, 0);
             this.SearchCountry.Name = "SearchCountry";
-            this.SearchCountry.Size = new System.Drawing.Size(458, 27);
+            this.SearchCountry.Size = new System.Drawing.Size(599, 23);
             this.SearchCountry.TabIndex = 1;
             // 
             // flowPanel
@@ -1491,7 +1213,7 @@ namespace Eu4HackGUI
             this.flowPanel.Location = new System.Drawing.Point(0, 0);
             this.flowPanel.Margin = new System.Windows.Forms.Padding(0);
             this.flowPanel.Name = "flowPanel";
-            this.flowPanel.Size = new System.Drawing.Size(458, 379);
+            this.flowPanel.Size = new System.Drawing.Size(599, 421);
             this.flowPanel.TabIndex = 5;
             // 
             // Hack
@@ -1512,10 +1234,10 @@ namespace Eu4HackGUI
             // 
             this.Hack.Panel2.Controls.Add(this.Run);
             this.Hack.Panel2.Controls.Add(this.SelectedTypesLabel);
-            this.Hack.Size = new System.Drawing.Size(659, 408);
+            this.Hack.Size = new System.Drawing.Size(800, 450);
             this.Hack.SplitterDistance = 200;
             this.Hack.SplitterWidth = 1;
-            this.Hack.TabIndex = 6;
+            this.Hack.TabIndex = 5;
             // 
             // TypeCheckListBox
             // 
@@ -1530,7 +1252,7 @@ namespace Eu4HackGUI
             "Countries"});
             this.TypeCheckListBox.Location = new System.Drawing.Point(0, 0);
             this.TypeCheckListBox.Name = "TypeCheckListBox";
-            this.TypeCheckListBox.Size = new System.Drawing.Size(231, 408);
+            this.TypeCheckListBox.Size = new System.Drawing.Size(231, 450);
             this.TypeCheckListBox.TabIndex = 2;
             // 
             // Run
@@ -1554,49 +1276,24 @@ namespace Eu4HackGUI
             // 
             this.SelectedTypesLabel.AutoSize = true;
             this.SelectedTypesLabel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.SelectedTypesLabel.Location = new System.Drawing.Point(0, 388);
+            this.SelectedTypesLabel.Location = new System.Drawing.Point(0, 435);
             this.SelectedTypesLabel.Name = "SelectedTypesLabel";
-            this.SelectedTypesLabel.Size = new System.Drawing.Size(106, 20);
+            this.SelectedTypesLabel.Size = new System.Drawing.Size(83, 15);
             this.SelectedTypesLabel.TabIndex = 3;
             this.SelectedTypesLabel.Text = "None Selected";
             // 
-            // GUI
+            // Temp
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(800, 428);
-            this.Controls.Add(this.Main);
-            this.DoubleBuffered = true;
-            this.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.MinimumSize = new System.Drawing.Size(600, 300);
-            this.Name = "GUI";
-            this.Padding = new System.Windows.Forms.Padding(10);
-            this.ShowIcon = false;
-            this.Text = "GUI";
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Main)).EndInit();
-            this.Main.ResumeLayout(false);
-            this.MenuPanel.ResumeLayout(false);
-            this.DevToolsPanel.ResumeLayout(false);
-            this.DevToolsPanel.PerformLayout();
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Divider)).EndInit();
-            this.Divider.ResumeLayout(false);
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
-            this.splitContainer2.Panel1.ResumeLayout(false);
-            this.splitContainer2.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
-            this.splitContainer2.ResumeLayout(false);
-            this.HackPanel.ResumeLayout(false);
-            this.IdeasPanel.ResumeLayout(false);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Hack);
+            this.Controls.Add(this.IdeaSelection);
+            this.Controls.Add(this.MenuContainer);
+            this.Name = "Temp";
+            this.Text = "Temp";
+            ((System.ComponentModel.ISupportInitialize)(this.MenuContainer)).EndInit();
+            this.MenuContainer.ResumeLayout(false);
             this.IdeaSelection.Panel1.ResumeLayout(false);
             this.IdeaSelection.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.IdeaSelection)).EndInit();
@@ -1616,35 +1313,17 @@ namespace Eu4HackGUI
 
         }
 
-
-
         #endregion
 
-        private SplitContainer Main;
-        private Panel MenuPanel;
-        private Panel DevToolsPanel;
-        private Label SelectedCountry;
-        private Button CreateCountryList;
-        private Button CreateCountrySelectionSwitch;
-        private Button CreateIdeaList;
-        private SplitContainer splitContainer1;
-        private Button HackButton;
-        private Button IdeasButton;
-        private SplitContainer Divider;
-        private SplitContainer splitContainer2;
-        private Button ProvincesButton;
-        private Button DevToolsButton;
-        private Panel ProvincesPanel;
-        private Panel IdeasPanel;
-        private Panel HackPanel;
-        private SplitContainer IdeaSelection;
-        private CheckedListBox IdeaListBox;
-        private SplitContainer HorizontalContainer;
-        private TextBox SearchCountry;
-        private FlowLayoutPanel flowPanel;
-        private SplitContainer Hack;
-        private CheckedListBox TypeCheckListBox;
-        private Button Run;
-        private Label SelectedTypesLabel;
+        private System.Windows.Forms.SplitContainer MenuContainer;
+        private System.Windows.Forms.SplitContainer IdeaSelection;
+        private System.Windows.Forms.CheckedListBox IdeaListBox;
+        private System.Windows.Forms.SplitContainer HorizontalContainer;
+        private System.Windows.Forms.TextBox SearchCountry;
+        private System.Windows.Forms.FlowLayoutPanel flowPanel;
+        private System.Windows.Forms.SplitContainer Hack;
+        private System.Windows.Forms.CheckedListBox TypeCheckListBox;
+        private System.Windows.Forms.Button Run;
+        private System.Windows.Forms.Label SelectedTypesLabel;
     }
 }
