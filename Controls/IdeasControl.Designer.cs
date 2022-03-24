@@ -28,43 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.IdeaListBox = new System.Windows.Forms.CheckedListBox();
             this.flowPanel = new System.Windows.Forms.FlowLayoutPanel();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // splitContainer1
-            // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.splitContainer1.IsSplitterFixed = true;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(3, 3, 5, 3);
-            this.splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.IdeaListBox);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.flowPanel);
-            this.splitContainer1.Panel2.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.splitContainer1.Size = new System.Drawing.Size(231, 75);
-            this.splitContainer1.SplitterDistance = 261;
-            this.splitContainer1.TabIndex = 5;
             // 
             // IdeaListBox
             // 
             this.IdeaListBox.BackColor = System.Drawing.Color.Black;
+            this.IdeaListBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.IdeaListBox.CheckOnClick = true;
-            this.IdeaListBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.IdeaListBox.ForeColor = System.Drawing.Color.DarkGray;
-            this.IdeaListBox.FormattingEnabled = true;
+            this.IdeaListBox.Dock = System.Windows.Forms.DockStyle.Left;
+            this.IdeaListBox.ForeColor = System.Drawing.Color.DimGray;
             this.IdeaListBox.Items.AddRange(new object[] {
             "adm_tech_cost_modifier",
             "administrative_efficiency",
@@ -282,22 +256,21 @@
             "years_of_nationalism"});
             this.IdeaListBox.Location = new System.Drawing.Point(0, 0);
             this.IdeaListBox.Name = "IdeaListBox";
-            this.IdeaListBox.Size = new System.Drawing.Size(261, 75);
+            this.IdeaListBox.Size = new System.Drawing.Size(261, 300);
             this.IdeaListBox.Sorted = true;
             this.IdeaListBox.TabIndex = 2;
             // 
             // flowPanel
             // 
             this.flowPanel.AutoScroll = true;
-            this.flowPanel.AutoSize = true;
             this.flowPanel.BackColor = System.Drawing.Color.Black;
             this.flowPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowPanel.Location = new System.Drawing.Point(0, 0);
+            this.flowPanel.Location = new System.Drawing.Point(261, 0);
             this.flowPanel.Margin = new System.Windows.Forms.Padding(0);
             this.flowPanel.Name = "flowPanel";
-            this.flowPanel.Size = new System.Drawing.Size(25, 75);
-            this.flowPanel.TabIndex = 3;
+            this.flowPanel.Size = new System.Drawing.Size(339, 300);
+            this.flowPanel.TabIndex = 7;
             // 
             // IdeasControl
             // 
@@ -305,22 +278,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Black;
-            this.Controls.Add(this.splitContainer1);
+            this.Controls.Add(this.flowPanel);
+            this.Controls.Add(this.IdeaListBox);
             this.MinimumSize = new System.Drawing.Size(150, 75);
             this.Name = "IdeasControl";
-            this.Size = new System.Drawing.Size(231, 75);
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            this.splitContainer1.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
+            this.Size = new System.Drawing.Size(600, 300);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.CheckedListBox IdeaListBox;
         private System.Windows.Forms.FlowLayoutPanel flowPanel;
     }

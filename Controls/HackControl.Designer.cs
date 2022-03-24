@@ -33,21 +33,27 @@
             this.SelectedTypesLabel = new System.Windows.Forms.Label();
             this.SelectedCountry = new System.Windows.Forms.Label();
             this.SearchCountry = new System.Windows.Forms.TextBox();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Run
             // 
             this.Run.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.Run.Dock = System.Windows.Forms.DockStyle.Top;
             this.Run.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.Run.FlatAppearance.BorderSize = 0;
             this.Run.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.Run.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.Run.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Run.ForeColor = System.Drawing.Color.DarkGray;
-            this.Run.Location = new System.Drawing.Point(0, 0);
+            this.Run.Location = new System.Drawing.Point(0, 23);
             this.Run.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Run.Name = "Run";
-            this.Run.Size = new System.Drawing.Size(217, 29);
+            this.Run.Size = new System.Drawing.Size(399, 29);
             this.Run.TabIndex = 0;
             this.Run.Text = "Run";
             this.Run.UseVisualStyleBackColor = false;
@@ -65,14 +71,16 @@
             "Countries"});
             this.TypeCheckListBox.Location = new System.Drawing.Point(0, 0);
             this.TypeCheckListBox.Name = "TypeCheckListBox";
-            this.TypeCheckListBox.Size = new System.Drawing.Size(231, 75);
+            this.TypeCheckListBox.Size = new System.Drawing.Size(231, 400);
             this.TypeCheckListBox.TabIndex = 1;
             // 
             // SelectedTypesLabel
             // 
             this.SelectedTypesLabel.AutoSize = true;
             this.SelectedTypesLabel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.SelectedTypesLabel.Location = new System.Drawing.Point(231, 60);
+            this.SelectedTypesLabel.ForeColor = System.Drawing.Color.DimGray;
+            this.SelectedTypesLabel.Location = new System.Drawing.Point(0, 370);
+            this.SelectedTypesLabel.Margin = new System.Windows.Forms.Padding(3);
             this.SelectedTypesLabel.Name = "SelectedTypesLabel";
             this.SelectedTypesLabel.Size = new System.Drawing.Size(83, 15);
             this.SelectedTypesLabel.TabIndex = 2;
@@ -81,8 +89,10 @@
             // SelectedCountry
             // 
             this.SelectedCountry.AutoSize = true;
-            this.SelectedCountry.ForeColor = System.Drawing.Color.DarkGray;
-            this.SelectedCountry.Location = new System.Drawing.Point(0, 0);
+            this.SelectedCountry.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.SelectedCountry.ForeColor = System.Drawing.Color.DimGray;
+            this.SelectedCountry.Location = new System.Drawing.Point(0, 385);
+            this.SelectedCountry.Margin = new System.Windows.Forms.Padding(3);
             this.SelectedCountry.Name = "SelectedCountry";
             this.SelectedCountry.Size = new System.Drawing.Size(97, 15);
             this.SelectedCountry.TabIndex = 2;
@@ -948,10 +958,33 @@
             this.SearchCountry.BackColor = System.Drawing.Color.Black;
             this.SearchCountry.Dock = System.Windows.Forms.DockStyle.Top;
             this.SearchCountry.ForeColor = System.Drawing.Color.DarkGray;
-            this.SearchCountry.Location = new System.Drawing.Point(231, 0);
+            this.SearchCountry.Location = new System.Drawing.Point(0, 0);
             this.SearchCountry.Name = "SearchCountry";
-            this.SearchCountry.Size = new System.Drawing.Size(0, 23);
+            this.SearchCountry.Size = new System.Drawing.Size(399, 23);
             this.SearchCountry.TabIndex = 3;
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(0);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.TypeCheckListBox);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.Run);
+            this.splitContainer1.Panel2.Controls.Add(this.SearchCountry);
+            this.splitContainer1.Panel2.Controls.Add(this.SelectedTypesLabel);
+            this.splitContainer1.Panel2.Controls.Add(this.SelectedCountry);
+            this.splitContainer1.Size = new System.Drawing.Size(600, 400);
+            this.splitContainer1.SplitterDistance = 200;
+            this.splitContainer1.SplitterWidth = 1;
+            this.splitContainer1.TabIndex = 4;
             // 
             // HackControl
             // 
@@ -959,16 +992,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Black;
-            this.Controls.Add(this.SearchCountry);
-            this.Controls.Add(this.SelectedCountry);
-            this.Controls.Add(this.SelectedTypesLabel);
-            this.Controls.Add(this.TypeCheckListBox);
-            this.Controls.Add(this.Run);
+            this.Controls.Add(this.splitContainer1);
             this.MinimumSize = new System.Drawing.Size(150, 75);
             this.Name = "HackControl";
-            this.Size = new System.Drawing.Size(231, 75);
+            this.Size = new System.Drawing.Size(600, 400);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            this.splitContainer1.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -979,5 +1012,6 @@
         private System.Windows.Forms.Label SelectedTypesLabel;
         private System.Windows.Forms.Label SelectedCountry;
         private System.Windows.Forms.TextBox SearchCountry;
+        private System.Windows.Forms.SplitContainer splitContainer1;
     }
 }

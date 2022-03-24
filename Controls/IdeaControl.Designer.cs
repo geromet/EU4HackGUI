@@ -89,6 +89,7 @@ namespace Eu4HackGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.Add);
@@ -97,6 +98,7 @@ namespace Eu4HackGUI
             this.Controls.Add(this.Idea);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MinimumSize = new System.Drawing.Size(110, 65);
             this.Name = "IdeaControl";
             this.Size = new System.Drawing.Size(110, 65);
             this.ResumeLayout(false);
