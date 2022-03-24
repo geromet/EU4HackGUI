@@ -39,6 +39,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Controls\IdeasControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Controls\HackControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Hack\Presets\Country.cs">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Compile>

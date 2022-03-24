@@ -4,10 +4,13 @@
     <_LastSelectedProfileId>C:\Users\gerom\Desktop\Eu4HackGUI\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Update="Controls\DevToolsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="GUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="IdeaControl.cs">
+    <Compile Update="Controls\IdeaControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
